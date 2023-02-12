@@ -1,13 +1,44 @@
 /* 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- Clase
- ID
+ Clase ✔
+ ID ✔
  Elemento ✔
  Descendente
 */
 
-body {}
+/* RESET */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
 
-.header {}
+/* FOOTER */
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* HEADER */
+#header {
+    padding: 0 6.4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.header-top {}
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .heading { color: #ffffff; } */
+
+
+/* MAIN */
 .main {}
+
+/* FOOTER */
 .footer {}
