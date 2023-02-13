@@ -12,9 +12,22 @@ html {
 	font-size: 62.5%;
 }
 
-/* FOOTER */
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+p { margin: 0; }
+
+/* BODY */
 body {
     margin: 0;
+    padding: 0 .6rem;
     font-size: 1.6rem;
     font-weight: 400;
 }
@@ -39,6 +52,24 @@ body {
 
 /* MAIN */
 .main {}
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading-3 {}
+.text {}
+
+.menu { display: flex; }
+
+.menu-1 {}
+.menu-2 {}
+
+.m1-item { padding: 0 4.0rem; }
+.m1-link { display: block; }
+.m2-item { padding: 0 4.0rem; }
+.m2-link { display: block; }
 
 /* FOOTER */
 .footer {}
