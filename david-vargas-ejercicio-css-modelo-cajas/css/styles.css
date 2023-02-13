@@ -20,7 +20,7 @@
 /* RESET */
 html {
 	box-sizing: border-box;
-	font-size: 62.5%;
+	font-size: 62.5%; /* 1rem = 10px */
 }
 
 a {
@@ -46,18 +46,28 @@ p { margin: 0; }
 
 /* HEADER */
 #header {
-	padding: 0 6.4rem;
+	margin-bottom: 11.2rem;
+	padding: 1.6rem 9.2rem 1.4rem 8.0rem;
 	display: flex;
 	flex-direction: column;
 	background-color: #191919;
 	color: #ffffff;
 }
 
-.header__top {}
+.header__top {
+	width: 76.4rem;
+	margin-bottom: 30.0rem;
+}
+
 .header__bottom {
 	display: flex;
 	justify-content: space-between;
 }
+
+.header__text { font-size: 1.8rem; }
+.header__text--3 { color: #848484; }
+
+.header__dot { color: #06ea4a; }
 
 /* .heading { color: #ffffff; } */
 
@@ -65,27 +75,89 @@ p { margin: 0; }
 /* MAIN */
 .main {}
 
-.nav {}
+.nav { display: flex; }
+
 .nav--1 {
-	display: flex;
+	margin-bottom: 16.0rem;
+	padding: 0 6.4rem;
 	justify-content: space-between;
 }
+
+.nav--2 {}
 
 .menu { display: flex; }
 
 .menu--1 {}
-.menu--2 {}
+.menu--2 { margin-left: auto; }
 
-.menu__item { padding: 0 4.0rem; }
-.menu__link { display: block; }
+.menu__item { padding: 0 3.2rem; }
+.menu__link {
+	display: block;
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+.main__text { font-weight: 600; }
+
+.main__text--1 {
+	align-self: center;
+	font-size: 2.4rem;
+}
+
+.main__text--2 {
+	margin-bottom: 3.2rem;
+	padding: 0 6.4rem 0 6.4rem;
+	font-size: 9.2rem;
+}
+
+.main__text--3 {
+	font-size: 11.2rem;
+	color: #f94a00;
+}
+
+.main__text--4 { font-size: 8.0rem; }
+
+.main__underline { text-decoration: underline; }
+
 
 /* FOOTER */
 .footer {}
 
 
 /* OTHER */
-.heading {}
-.heading--1 {}
-.heading--2 {}
-.heading--3 {}
+.heading { margin: 0; }
+
+.heading--1 {
+	margin-bottom: 3.2rem;
+	font-size: 4.0rem;
+}
+.heading--2 {
+	margin-bottom: 3.2rem;
+	line-height: 1.4;
+	font-size: 4.0rem;
+	font-weight: 500;
+	font-family: 'Times New Roman';
+}
+.heading--3 { font-size: 4.0rem; }
+
 .heading--4 {}
+
+.underline { position: relative; }
+
+.underline::after {
+	width: 100%;
+	content: '';
+	position: absolute;
+	left: 0;
+}
+
+.underline--1::after {
+	height: .1rem;
+	top: calc( 100% + 1rem );
+	background-color: #797979;
+}
+.underline--2::after {
+	height: .8rem;
+	top: calc( 100% + .4rem );
+	background-color: #f94a00;
+}
