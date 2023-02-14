@@ -47,7 +47,8 @@ p { margin: 0; }
 /* HEADER */
 #header {
 	margin-bottom: 11.2rem;
-	padding: 1.6rem 9.2rem 1.4rem 8.0rem;
+	height: 36.0rem;
+	padding: 1.2rem 7.2rem .8rem 6.0rem;
 	display: flex;
 	flex-direction: column;
 	background-color: #191919;
@@ -56,7 +57,7 @@ p { margin: 0; }
 
 .header__top {
 	width: 76.4rem;
-	margin-bottom: 30.0rem;
+	margin-bottom: auto;
 }
 
 .header__bottom {
@@ -64,7 +65,7 @@ p { margin: 0; }
 	justify-content: space-between;
 }
 
-.header__text { font-size: 1.8rem; }
+.header__text { font-size: 1.4rem; }
 .header__text--3 { color: #848484; }
 
 .header__dot { color: #06ea4a; }
@@ -128,11 +129,11 @@ p { margin: 0; }
 .heading { margin: 0; }
 
 .heading--1 {
-	margin-bottom: 3.2rem;
-	font-size: 4.0rem;
+	margin-bottom: 2.0rem;
+	font-size: 3.0rem;
 }
 .heading--2 {
-	margin-bottom: 3.2rem;
+	margin-bottom: 2.4rem;
 	line-height: 1.4;
 	font-size: 4.0rem;
 	font-weight: 500;
