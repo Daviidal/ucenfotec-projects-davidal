@@ -20,6 +20,7 @@
 /* RESET */
 html {
 	box-sizing: border-box;
+	background-color: #282828;
 	font-size: 62.5%; /* 1rem = 10px */
 }
 
@@ -30,6 +31,7 @@ a {
 
 ul {
 	padding: 0;
+	margin: 0;
 	list-style-type: none;
 }
 
@@ -37,8 +39,10 @@ p { margin: 0; }
 
 /* BODY */
 .body {
-	margin: 0;
-	padding: 0 .6rem;
+	width: 94.0rem;
+	margin: 0 auto;
+	padding: 0 .4rem;
+	background-color: #ffffff;
 	font-family: 'Arial';
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -46,7 +50,7 @@ p { margin: 0; }
 
 /* HEADER */
 #header {
-	margin-bottom: 11.2rem;
+	margin-bottom: 8.0rem;
 	height: 36.0rem;
 	padding: 1.2rem 7.2rem .8rem 6.0rem;
 	display: flex;
@@ -70,45 +74,18 @@ p { margin: 0; }
 
 .header__dot { color: #06ea4a; }
 
-/* .heading { color: #ffffff; } */
-
 
 /* MAIN */
 .main {}
 
-.nav { display: flex; }
-
-.nav--1 {
-	margin-bottom: 16.0rem;
-	padding: 0 6.4rem;
-	justify-content: space-between;
-}
-
-.nav--2 {}
-
-.menu { display: flex; }
-
-.menu--1 {}
-.menu--2 { margin-left: auto; }
-
-.menu__item { padding: 0 3.2rem; }
-.menu__link {
-	display: block;
-	font-size: 2.4rem;
-	font-weight: 600;
-}
-
 .main__text { font-weight: 600; }
 
-.main__text--1 {
-	align-self: center;
-	font-size: 2.4rem;
-}
+.main__text--1 { font-size: 1.4rem; }
 
 .main__text--2 {
-	margin-bottom: 3.2rem;
-	padding: 0 6.4rem 0 6.4rem;
-	font-size: 9.2rem;
+	margin-bottom: 3.0rem;
+	padding: 0 6.4rem 0 3.2rem;
+	font-size: 5.6rem;
 }
 
 .main__text--3 {
@@ -125,6 +102,34 @@ p { margin: 0; }
 .footer {}
 
 
+/* NAV */
+.nav { display: flex; }
+
+.nav--1 {
+	margin-bottom: 13.4rem;
+	padding: 0 3.2rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav--2 {}
+
+.menu {
+	display: flex;
+	gap: 2.2rem;
+}
+
+/* MENU */
+.menu--1 {}
+.menu--2 { margin-left: auto; }
+
+.menu__item {}
+.menu__link {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
 /* OTHER */
 .heading { margin: 0; }
 
@@ -139,7 +144,7 @@ p { margin: 0; }
 	font-weight: 500;
 	font-family: 'Times New Roman';
 }
-.heading--3 { font-size: 4.0rem; }
+.heading--3 { font-size: 2.2rem; }
 
 .heading--4 {}
 
