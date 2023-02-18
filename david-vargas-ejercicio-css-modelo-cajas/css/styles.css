@@ -1,11 +1,3 @@
-/* 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- Clase ✔
- ID ✔
- Elemento ✔
- Descendente
-*/
-
 /*
  * I'm usign BEM (BLOCK, ELEMENT & MODIFIER) for naming. Example:
  *
@@ -13,12 +5,12 @@
  *
  * For more information: https://getbem.com/naming/
  *
- * 📝 NOTE: This naming methodology is better for SCSS/SASS.
+ * 📝 NOTE: This naming methodology works beter with SCSS/SASS.
 */
 
 
 /* RESET */
-html {
+html { /* <<<-- ELEMENT Selector */
 	box-sizing: border-box;
 	background-color: #282828;
 	font-size: 62.5%; /* 1rem = 10px */
@@ -30,15 +22,15 @@ a {
 }
 
 ul {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	list-style-type: none;
 }
 
 p { margin: 0; }
 
 /* BODY */
-.body {
+.body { /* <<<-- CLASS Selector */
 	width: 94.0rem;
 	margin: 0 auto;
 	padding: 0 .4rem;
@@ -49,20 +41,18 @@ p { margin: 0; }
 }
 
 /* HEADER */
-#header {
-	margin-bottom: 8.0rem;
+#header { /* <<<-- ID Selector */
 	height: 36.0rem;
+	margin-bottom: 8.0rem;
 	padding: 1.2rem 7.2rem .8rem 6.0rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	background-color: #191919;
 	color: #ffffff;
 }
 
-.header__top {
-	width: 76.4rem;
-	margin-bottom: auto;
-}
+.header__top { width: 76.4rem; }
 
 .header__bottom {
 	display: flex;
@@ -70,13 +60,16 @@ p { margin: 0; }
 }
 
 .header__text { font-size: 1.4rem; }
-.header__text--3 { color: #848484; }
 
-.header__dot { color: #06ea4a; }
+.header__text--gray { color: #848484; }
+
+#header .header__dot { /* <<<-- DESCENDANT Selector */
+	color: #06ea4a;
+}
 
 
 /* MAIN */
-.main {}
+.main { margin-bottom: 5.0rem; }
 
 .main__text { font-weight: 600; }
 
@@ -91,8 +84,8 @@ p { margin: 0; }
 
 .main__text--3 {
 	max-width: 45.0rem;
-	padding-left: 2.0rem;
 	margin-bottom: 2.0rem;
+	padding-left: 2.0rem;
 	font-size: 6.4rem;
 	color: #f94a00;
 }
@@ -100,7 +93,6 @@ p { margin: 0; }
 .main__text--4 {
 	width: 77.2rem;
 	margin-left: auto;
-	margin-bottom: 5.0rem;
 	padding-right: 3.2rem;
 	line-height: 1.3;
 	font-size: 4.4rem;
@@ -108,8 +100,6 @@ p { margin: 0; }
 
 
 /* FOOTER */
-.footer {}
-
 .footer__backdrop {
 	width: 100%;
 	display: block;
@@ -131,21 +121,21 @@ p { margin: 0; }
 	padding-right: 4.4rem;
 }
 
+/* MENU */
 .menu {
 	display: flex;
 	gap: 2.2rem;
 }
 
-/* MENU */
-.menu--1 {}
 .menu--2 { margin-left: auto; }
 
-.menu__item {}
 .menu__link {
 	display: block;
 	font-size: 1.4rem;
 	font-weight: 600;
 }
+
+.menu__highlight { color: #f94a00; }
 
 /* OTHER */
 .heading { margin: 0; }
@@ -154,15 +144,14 @@ p { margin: 0; }
 	margin-bottom: 2.0rem;
 	font-size: 3.0rem;
 }
+
 .heading--2 {
 	margin-bottom: 2.4rem;
 	line-height: 1.4;
+	font-family: 'Times New Roman';
 	font-size: 4.0rem;
 	font-weight: 500;
-	font-family: 'Times New Roman';
 }
-
-.heading--4 {}
 
 .underline { position: relative; }
 
@@ -178,6 +167,7 @@ p { margin: 0; }
 	top: calc( 100% + 1rem );
 	background-color: #797979;
 }
+
 .underline--2::after {
 	height: .5rem;
 	top: 100%;
