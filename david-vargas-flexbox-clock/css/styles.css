@@ -37,14 +37,12 @@ ul {
 	height: 100vh;
 	margin: 0;
 	background: linear-gradient( 90deg, rgba( 235, 51, 73, 1 ) 0%, rgba( 244, 92, 67, 1 ) 100% );
-	font-family: 'Arial';
 }
 
 /* COUNTER */
 .counter {
 	height: 100%;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	user-select: none;
@@ -69,11 +67,7 @@ ul {
 }
 
 @media only screen and ( max-device-width: 1000px ) {
-	.counter {
-		flex-direction: column;
-		/* justify-content: center;
-		gap: 30px; */
-	}
+	.counter { flex-direction: column; }
 
 	.counter__number { font-size: 10vw; }
 	
