@@ -1,20 +1,34 @@
+/*
+ * I'm usign BEM (BLOCK, ELEMENT & MODIFIER) for naming. Example:
+ *
+ * .block__element--modifier {}
+ *
+ * For more information: https://getbem.com/naming/
+ *
+ * 📝 NOTE: This naming methodology works beter with SCSS/SASS.
+*/
+
+/***************************************** 
+ * Layout
+******************************************/
 .body {
+	max-width: 144.2rem;
+	margin: 0 auto;
+}
+
+.heading {
+	margin-bottom: 2.0rem;
+	font-family: 'Open Sans Bold';
+	font-size: 2.2rem;
 }
 
 .cards {
-	max-width: 144.2rem;
-	margin: 0 auto;
 	display: flex;
 	gap: 3.2rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.cards__heading {
-	width: 100%;
-	font-family: 'Open Sans Bold';
-	font-size: 2.2rem;
-}
 /***************************************** 
  * Card
 ******************************************/
