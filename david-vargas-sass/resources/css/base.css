@@ -1,0 +1,11 @@
+.header {
+  background-color: #800080;
+}
+
+.main {
+  display: flex;
+}
+
+.article {
+  background-color: #00ffff;
+}
