@@ -1,15 +1,43 @@
+.body {
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+}
+
 .header {
+    padding: 12px 0;
     background-color: #800080;
+
+    .heading-1 {
+        font-size: 24px;
+        text-align: center;
+        color: #ffffff;
+    }
 }
 
 .main {
+    height: 100%;
+    padding: 8px;
     display: flex;
+    gap: 14px;
+
+    .article {
+        padding: 0 8px;
+        padding-top: 18px;
+        background-color: #00ffff;
+
+        .heading-2 {
+            margin: 0;
+            margin-bottom: 18px;
+            font-size: 18px;
+        }
+
+        .paragraph {
+            margin: 0;
+            margin-bottom: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
 }
-
-.article {
-    background-color: #00ffff;
-}
-
-.heading {}
-
-.heading {}
