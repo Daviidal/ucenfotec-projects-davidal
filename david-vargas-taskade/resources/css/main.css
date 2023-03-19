@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  background: rgb(0, 0, 0);
+}
+
+.nav {
+  max-width: 140rem;
+  padding: 1.6rem 3rem;
+  position: sticky;
+  z-index: 11;
+  top: -1px;
+  box-shadow: rgba(255, 255, 255, 0) 0px 1px 1px inset, rgba(0, 0, 0, 0) 0px -1px 3px inset;
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
+
+.menu__item {
+  position: relative;
+}
+.menu__link {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.menu__link:hover {
+  opacity: 0.7;
+  transition: opacity 200ms ease-in-out 0s;
+}
+
+.menu__item:hover > .dropdown {
+  display: block;
+}
+
+.dropdown {
+  padding: 2.4rem 2.4rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background-color: #000000;
+}
+.dropdown__item {
+  margin-bottom: 1.5rem;
+}
+.dropdown__link {
+  font-size: 1.6rem;
+  white-space: nowrap;
+  color: #ffffff;
+}
