@@ -30,4 +30,7 @@ ul {
 a { text-decoration: none; }
 
 button,
-textarea { font-family: 'Open Sans', sans-serif; }
+textarea {
+	padding: 0;
+	border: none;
+}

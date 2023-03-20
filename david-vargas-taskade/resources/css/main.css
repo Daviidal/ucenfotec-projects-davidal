@@ -37,7 +37,8 @@ a {
 
 button,
 textarea {
-  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  border: none;
 }
 
 .my-btn {
@@ -81,11 +82,84 @@ textarea {
   max-width: 140rem;
   margin: 0 auto;
   padding: 1.6rem 3rem;
+  transition: padding 200ms ease-in-out 0s;
 }
-.header__btn {
-  margin-right: 2rem;
+.header__logo {
+  height: 3.5rem;
+  margin-right: 4rem;
+  display: block;
+  transition: transform 250ms ease 0s, opacity 400ms ease 0s;
+}
+.header__logo:hover {
+  transform: scale(1.1);
+}
+.header__icon {
+  height: 100%;
+  margin-right: 0.4rem;
+}
+.header__text {
+  height: 1.7rem;
+}
+.header__btn-contact {
+  position: relative;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: opacity 200ms ease-in-out 0s;
+}
+.header__btn-contact::before {
+  width: 100%;
+  margin-bottom: -0.4rem;
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out 0s;
+}
+.header__btn-contact:hover {
+  opacity: 0.7;
+}
+.header__btn-contact:hover::before {
+  transform: scaleX(1);
+}
+.header__btn-signup-2 {
+  padding: 0.4rem 1.8rem;
+  margin-right: 1rem;
+  display: none;
 }
 
+@media only screen and (max-device-width: 1199px) {
+  .header__btn-contact {
+    display: none;
+  }
+}
+@media only screen and (max-device-width: 1099px) {
+  .header__text {
+    display: none;
+  }
+}
+@media only screen and (max-device-width: 991px) {
+  .header__wrapper {
+    padding: 0.5rem 2rem;
+  }
+  .header__text {
+    display: inline;
+  }
+  .header__btn-contact {
+    display: none;
+  }
+  .header__btn-login {
+    display: none;
+  }
+  .header__btn-signup-1 {
+    display: none;
+  }
+  .header__btn-signup-2 {
+    display: block;
+  }
+}
 .top-msg {
   padding: 0.8rem 2rem;
   background-color: rgba(93, 39, 67, 0.3);
@@ -96,27 +170,6 @@ textarea {
 }
 .top-msg__link:hover {
   color: rgb(255, 102, 139);
-}
-.top-msg__btn {
-  padding: 0.2rem 1.2rem;
-  border-radius: 0.8rem;
-  font-size: 1.5rem;
-}
-
-.logo {
-  height: 3.5rem;
-  margin-right: 8rem;
-  display: block;
-  transition: transform 250ms ease 0s, opacity 400ms ease 0s;
-}
-.logo:hover {
-  transform: scale(1.1);
-}
-.logo__icon {
-  height: 100%;
-}
-.logo__text {
-  height: 1.7rem;
 }
 
 .nav {
@@ -134,10 +187,10 @@ textarea {
   font-size: 1.6rem;
   white-space: nowrap;
   color: #ffffff;
+  transition: opacity 200ms ease-in-out 0s;
 }
 .menu__link:hover {
   opacity: 0.7;
-  transition: opacity 200ms ease-in-out 0s;
 }
 .menu__link--underscore::before {
   width: 100%;
@@ -202,4 +255,82 @@ textarea {
 }
 .dropdown__item {
   margin-bottom: 1.5rem;
+}
+
+.toggle {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: none;
+  position: relative;
+}
+.toggle__input {
+  z-index: 4;
+  visibility: hidden;
+  position: absolute;
+}
+.toggle__btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  background-image: url("../svg/hm-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.toggle__background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-in-out 0s;
+}
+
+#hidden-menu:checked ~ .menu-2 {
+  transform: translateX(0);
+}
+
+#hidden-menu:checked ~ .toggle__background {
+  pointer-events: fill;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hidden-menu:checked ~ .toggle__btn {
+  background-image: url("../svg/hm-close.svg");
+}
+
+.menu-2 {
+  width: 100%;
+  padding-top: 10rem;
+  padding-left: 3rem;
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  transform: translateX(-100%);
+  background: rgba(0, 0, 0, 0.9);
+  transition: transform 960ms cubic-bezier(0.2, 1.17, 0.3, 1) 0s, background 0s ease 0s;
+}
+.menu-2__item {
+  padding: 0.5rem;
+}
+.menu-2__link {
+  display: block;
+  font-size: 1.8rem;
+  color: #fafafa;
+}
+
+@media only screen and (max-device-width: 991px) {
+  .top-msg {
+    display: none !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  .toggle {
+    display: block;
+  }
 }

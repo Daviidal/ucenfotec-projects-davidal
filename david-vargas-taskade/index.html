@@ -13,18 +13,17 @@
 		<!-- Top Message -->
 		<div class = "top-msg d-flex justify-content-center">
 			<a class = "top-msg__link" href = "javascript:void( 0 )">🤖 Taskade AI - now on all platforms! Try for free and experience the future of productivity.</a>
-			<a class = "my-btn top-msg__btn" href = "javascript:void( 0 )">Contact sales</a>
 		</div>
 		<!-- Header -->
 		<header class = "header">
 			<div class = "header__wrapper d-flex align-items-center">
 				<!-- Logo -->
-				<a class = "logo" href = "index.html">
-					<img class = "logo__icon" src = "resources/svg/logo-icon.svg" alt = "Logo's Icon"/>
-					<img class = "logo__text" src = "resources/svg/logo-text.svg" alt = "Logo's Letters"/>
+				<a class = "header__logo" href = "index.html">
+					<img class = "header__icon" src = "resources/svg/logo-icon.svg" alt = "Logo's Icon"/>
+					<img class = "header__text" src = "resources/svg/logo-text.svg" alt = "Logo's Letters"/>
 				</a>
 				<!-- Navigation Menu -->
-				<nav class = "nav me-auto">
+				<nav class = "nav">
 					<ul class = "menu d-flex gap-5">
 						<li class = "menu__item">
 							<a class = "menu__link" href = "#">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
@@ -62,12 +61,33 @@
 							</ul>
 						</li>
 						<li class = "menu__item"><a class = "menu__link menu__link--underscore" href = "javascript:void( 0 )">Templates</a></li>
-						<li class = "menu__item"><a class = "menu__link menu__link--underscore" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "menu__item me-auto"><a class = "menu__link menu__link--underscore" href = "javascript:void( 0 )">Pricing</a></li>
 					</ul>
 				</nav>
 				<!-- Buttons -->
-				<a class = "header__btn my-btn my-btn--empty" href = "javascript:void( 0 )">Log In</a>
-				<a class = "my-btn" href = "javascript:void( 0 )">Sign up for free</a>
+				<div class = "header__buttons ms-auto d-flex gap-4 align-items-center">
+					<a class = "header__btn-contact" href = "javascript:void( 0 )">Contact Sales</a>
+					<a class = "header__btn-login my-btn my-btn--empty" href = "javascript:void( 0 )">Log In</a>
+					<a class = "header__btn-signup-1 my-btn" href = "javascript:void( 0 )">Sign up for free</a>
+					<a class = "header__btn-signup-2 my-btn" href = "javascript:void( 0 )">Sign up</a>
+				</div>
+				<!-- Toggle -->
+				<label class = "toggle" for = "hidden-menu">
+					<input id = "hidden-menu" class = "toggle__input" type = "checkbox"/>
+					<span class = "toggle__btn"></span>
+					<div class = "toggle__background"></div>
+					<ul class = "menu-2 d-flex flex-column gap-4">
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Sign up for free</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Log in</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Home</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Downloads</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Blog</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">About</a></li>
+						<li class = "menu-2__item"><a class = "menu-2__link" href = "javascript:void( 0 )">Contact</a></li>
+					</ul>
+				</label>
 			</div>
 		</header>
 		<!-- Main -->
