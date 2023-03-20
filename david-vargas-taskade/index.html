@@ -9,50 +9,66 @@
 		<link rel = "stylesheet" href = "resources/css/main.css"/>
 		<title>Taskade</title>
 	</head>
-	<body>
+	<body class = "body" style="height: 2000px">
+		<!-- Top Message -->
+		<div class = "top-msg d-flex justify-content-center">
+			<a class = "top-msg__link" href = "javascript:void( 0 )">🤖 Taskade AI - now on all platforms! Try for free and experience the future of productivity.</a>
+			<a class = "my-btn top-msg__btn" href = "javascript:void( 0 )">Contact sales</a>
+		</div>
 		<!-- Header -->
 		<header class = "header">
-			<nav class = "nav">
-				<ul class = "menu d-flex gap-5">
-					<li class = "menu__item">
-						<a class = "menu__link" href = "#">Product</a>
-						<ul class = "dropdown">
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Download Apps</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Instant Demo</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Features</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Updates</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Security</a></li>
-						</ul>
-					</li>
-					<li class = "menu__item">
-						<a class = "menu__link" href = "javascript:void( 0 )">Solutions</a>
-						<ul class = "dropdown">
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Taskade AI</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Project Management</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Task Management</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Mind Mapping</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Remote Work</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Non-Profit</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Education</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Startup</a></li>
-						</ul>
-					</li>
-					<li class = "menu__item">
-						<a class = "menu__link" href = "javascript:void( 0 )">Learn</a>
-						<ul class = "dropdown">
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Blog</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Support Articles</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Community</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Get Help</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Reviews</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">Videos</a></li>
-							<li class = "dropdown__item"><a class = "dropdown__link" href = "javascript:void( 0 )">FAQ</a></li>
-						</ul>
-					</li>
-					<li class = "menu__item"><a class = "menu__link" href = "javascript:void( 0 )">Templates</a></li>
-					<li class = "menu__item"><a class = "menu__link" href = "javascript:void( 0 )">Pricing</a></li>
-				</ul>
-			</nav>
+			<div class = "header__wrapper d-flex align-items-center">
+				<!-- Logo -->
+				<a class = "logo" href = "index.html">
+					<img class = "logo__icon" src = "resources/svg/logo-icon.svg" alt = "Logo's Icon"/>
+					<img class = "logo__text" src = "resources/svg/logo-text.svg" alt = "Logo's Letters"/>
+				</a>
+				<!-- Navigation Menu -->
+				<nav class = "nav me-auto">
+					<ul class = "menu d-flex gap-5">
+						<li class = "menu__item">
+							<a class = "menu__link" href = "#">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Download Apps<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Instant Demo<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Features<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Updates<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Security<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Solutions<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s2">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Taskade AI<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Project Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Task Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Mind Mapping<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Remote Work<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Non-Profit<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Education<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Startup<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Learn<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Blog<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Support Articles<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Community<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Get Help<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Reviews<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Videos<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">FAQ<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item"><a class = "menu__link menu__link--underscore" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu__item"><a class = "menu__link menu__link--underscore" href = "javascript:void( 0 )">Pricing</a></li>
+					</ul>
+				</nav>
+				<!-- Buttons -->
+				<a class = "header__btn my-btn my-btn--empty" href = "javascript:void( 0 )">Log In</a>
+				<a class = "my-btn" href = "javascript:void( 0 )">Sign up for free</a>
+			</div>
 		</header>
 		<!-- Main -->
 		<main class = "main"></main>
