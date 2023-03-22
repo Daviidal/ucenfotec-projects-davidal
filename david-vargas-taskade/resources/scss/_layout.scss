@@ -70,19 +70,30 @@
 	width: 100%;
 	background: rgb( 0, 0, 0 );
 
+	&__row {
+		&--top { border-top: 1px solid rgb( 44, 48, 53 ); }
+		&--bottom { border-top: .1rem solid rgb( 71, 71, 71 ); }
+	}
+
+	&__col {}
+
 	&__wrapper {
 		width: 100%;
 		max-width: 140.0rem;
-		padding: 4rem 3rem;
+		margin: 0 auto;
+
+		&--1 { padding: 4rem 3rem; }
+		&--2 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2.5rem 3rem;
+		}
 	}
 
 	&__menu { width: 19.0rem; }
 
-	&__item {}
-
-	&__heading {
-		
-	}
+	&__item { &:not( :last-child ) { margin-bottom: 1.6rem; } }
 
 	&__link {
 		display: block;
@@ -97,7 +108,7 @@
 			color: #ffffff;
 		}
 	}
-	
+
 	&__btn {
 		margin-bottom: 1.6rem;
 		display: block;
@@ -107,6 +118,40 @@
 		transition: color 200ms ease 0s;
 
 		&:hover { color: rgb( 221, 221, 221 ); }
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 1rem;
+		display: block;
+	}
+
+	&__mobile {
+		color: #ffffff;
+		line-height: 172%;
+	}
+
+	&__message { display: block; }
+
+	&__legal {
+		color: rgb( 153, 153, 153 );
+		transition: opacity 200ms ease-in-out 0s;
+
+		&:not( :last-child ) { margin-right: 8px; }
+		&:hover { opacity: 0.7; }
+	}
+
+	&__social {
+		&:not( :first-child ) { margin-left: 1rem; }
+		&:not( :last-child ) { margin-right: 1rem; }
+	}
+	&__social:hover &__icon { opacity: 1; }
+
+	&__icon {
+		width: 2.0rem;
+		height: 2.0rem;
+		display: block;
+		opacity: .6;
 	}
 }
 
@@ -118,6 +163,16 @@
 @media only screen and ( max-device-width: 1099px ) {
 	.header { &__text { display: none; } }
 }
+@media only screen and ( max-device-width: 999px ) {
+	.footer {
+		&__wrapper {
+			&--1 { flex-wrap: wrap; align-items: flex-start; justify-content: flex-start;}
+		}
+
+		&__menu { width: calc( 100% / 2 ); }
+
+	}
+}
 @media only screen and ( max-device-width: 991px ) {
 	.header {
 		&__wrapper { padding: .5rem 2rem; }
@@ -126,5 +181,15 @@
 		&__btn-login { display: none; }
 		&__btn-signup-1 { display: none; }
 		&__btn-signup-2 { display: block; }
+	}
+
+	.footer {
+		&__wrapper {
+			padding: 4rem 2rem;
+
+			&--2 { flex-direction: column-reverse; }
+		}
+
+		&__message { text-align: center; }
 	}
 }

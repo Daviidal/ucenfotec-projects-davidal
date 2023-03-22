@@ -14,6 +14,7 @@ body {
   font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  color: #ffffff;
 }
 
 h1, h2 {
@@ -134,13 +135,31 @@ textarea {
   width: 100%;
   background: rgb(0, 0, 0);
 }
+.footer__row--top {
+  border-top: 1px solid rgb(44, 48, 53);
+}
+.footer__row--bottom {
+  border-top: 0.1rem solid rgb(71, 71, 71);
+}
 .footer__wrapper {
   width: 100%;
   max-width: 140rem;
+  margin: 0 auto;
+}
+.footer__wrapper--1 {
   padding: 4rem 3rem;
+}
+.footer__wrapper--2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 3rem;
 }
 .footer__menu {
   width: 19rem;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 1.6rem;
 }
 .footer__link {
   display: block;
@@ -165,6 +184,43 @@ textarea {
 .footer__btn:hover {
   color: rgb(221, 221, 221);
 }
+.footer__img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+.footer__mobile {
+  color: #ffffff;
+  line-height: 172%;
+}
+.footer__message {
+  display: block;
+}
+.footer__legal {
+  color: rgb(153, 153, 153);
+  transition: opacity 200ms ease-in-out 0s;
+}
+.footer__legal:not(:last-child) {
+  margin-right: 8px;
+}
+.footer__legal:hover {
+  opacity: 0.7;
+}
+.footer__social:not(:first-child) {
+  margin-left: 1rem;
+}
+.footer__social:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__social:hover .footer__icon {
+  opacity: 1;
+}
+.footer__icon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  opacity: 0.6;
+}
 
 .footer__item:hover .footer__link {
   opacity: 0.7;
@@ -178,6 +234,16 @@ textarea {
 @media only screen and (max-device-width: 1099px) {
   .header__text {
     display: none;
+  }
+}
+@media only screen and (max-device-width: 999px) {
+  .footer__wrapper--1 {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer__menu {
+    width: 50%;
   }
 }
 @media only screen and (max-device-width: 991px) {
@@ -198,6 +264,15 @@ textarea {
   }
   .header__btn-signup-2 {
     display: block;
+  }
+  .footer__wrapper {
+    padding: 4rem 2rem;
+  }
+  .footer__wrapper--2 {
+    flex-direction: column-reverse;
+  }
+  .footer__message {
+    text-align: center;
   }
 }
 .top-msg {
