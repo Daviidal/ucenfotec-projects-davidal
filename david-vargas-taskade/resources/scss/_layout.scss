@@ -64,7 +64,86 @@
 	}
 }
 
-.main {}
+.main {
+	padding-top: 4rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__heading {
+		max-width: 110.0rem;
+		margin: 4rem auto 2rem auto;
+		position: relative;
+		font-size: 11rem;
+		font-weight: 600;
+		line-height: 10rem;
+		letter-spacing: -.1rem;
+		text-align: center;
+
+		&:hover::after {
+			filter: blur( 140px );
+			opacity: .6;
+		}
+
+		&::after {
+			width: 90.0rem;
+			height: 50.0rem;
+			border-radius: 2rem;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform-origin: center center;
+			transform: skewY( -15deg ) translate( -50%,-50% ) scale( .7 ) translateZ( 0 );
+			filter: blur( 100px) ;
+			pointer-events: none;
+			opacity: .4;
+			background-image: linear-gradient(to right top,#6c22bd,#8b25bb,#a52bb9,#bc34b7,#d040b5,#e645a5,#f55195,#ff6188,#ff796e,#ff965b,#f5b255,#e1cd60);
+			transition: filter .25s ease-in-out, opacity .25s ease-in-out;
+		}
+	}
+}
+
+.features {
+	// margin: 0 auto 4rem 0;
+
+	&__item {
+		min-width: 16.0rem;
+		padding: .8rem 1.6rem;
+		border-radius: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		cursor: pointer;
+		transition: background-color 250ms ease-in-out 0s;
+
+		&:hover { background: rgba( 255, 255, 255, .08 ); }
+
+		&--active {
+			background: rgba( 255, 255, 255, .08 );
+			box-shadow: rgba( 255, 255, 255, .1 ) 0 1px inset;
+		}
+	}
+
+	&__item:hover &__icon { opacity: 1; }
+	
+	&__icon {
+		height: 2.0rem;
+		display: block;
+		opacity: .5;
+		transition: opacity 150ms ease-in-out 0s;
+	}
+
+	&__item:hover &__text { color: rgb( 255, 255, 255 ); }
+
+	&__text {
+		white-space: nowrap;
+		color: rgb( 204, 204, 204 );
+	}
+}
 
 .footer {
 	width: 100%;
@@ -84,14 +163,14 @@
 
 		&--1 { padding: 4rem 3rem; }
 		&--2 {
+			padding: 2.5rem 3rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 2.5rem 3rem;
 		}
 	}
 
-	&__menu { width: 19.0rem; }
+	&__menu { padding: 0 !important; } // Delete Bootstrap's default padding on columns
 
 	&__item { &:not( :last-child ) { margin-bottom: 1.6rem; } }
 
@@ -122,13 +201,16 @@
 
 	&__img {
 		width: 100%;
+		max-width: 20.0rem;
 		border-radius: 1rem;
 		display: block;
 	}
 
 	&__mobile {
-		color: #ffffff;
+		max-width: 20.0rem;
+		display: block;
 		line-height: 172%;
+		color: #ffffff;
 	}
 
 	&__message { display: block; }
@@ -155,23 +237,13 @@
 	}
 }
 
-.footer__item:hover .footer__link { opacity: 0.7; }
+.footer__item:hover > .footer__link { opacity: 0.7; }
 
 @media only screen and ( max-device-width: 1199px ) {
 	.header { &__btn-contact { display: none; } }
 }
 @media only screen and ( max-device-width: 1099px ) {
 	.header { &__text { display: none; } }
-}
-@media only screen and ( max-device-width: 999px ) {
-	.footer {
-		&__wrapper {
-			&--1 { flex-wrap: wrap; align-items: flex-start; justify-content: flex-start;}
-		}
-
-		&__menu { width: calc( 100% / 2 ); }
-
-	}
 }
 @media only screen and ( max-device-width: 991px ) {
 	.header {
