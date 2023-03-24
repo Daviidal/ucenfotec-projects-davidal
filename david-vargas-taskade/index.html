@@ -93,28 +93,50 @@
 		<!-- Main -->
 		<main class = "main">
 			<h1 class = "main__heading">Build a second brain for your teams.</h1>
-			<ul class = "features row">
-				<li class = "features__item features__item--active col">
-					<img class = "features__icon" src = "resources/img/icon-robot.png" alt = "Brainstorming">
-					<span class = "features__text">AI Writer</span>
-				</li>
-				<li class = "features__item col">
-					<img class = "features__icon" src = "resources/img/icon-task.png" alt = "Tasking">
-					<span class = "features__text">Tasks & Projects</span>
-				</li>
-				<li class = "features__item col">
-					<img class = "features__icon" src = "resources/img/icon-pen.png" alt = "Documents">
-					<span class = "features__text">Notes & Docs</span>
-				</li>
-				<li class = "features__item col">
-					<img class = "features__icon" src = "resources/img/icon-mapping.png" alt = "Mapping">
-					<span class = "features__text">Mind Maps</span>
-				</li>
-				<li class = "features__item col">
-					<img class = "features__icon" src = "resources/img/icon-cam.png" alt = "Video Chatting">
-					<span class = "features__text">Video Chat</span>
-				</li>
-			</ul>
+			<div class = "features d-flex flex-column align-items-center">
+				<ul class = "features__buttons row">
+					<li class = "features__btn features__btn--active col">
+						<img class = "features__icon" src = "resources/img/icon-robot.png" alt = "Brainstorming">
+						<span class = "features__text d-none d-lg-block">AI Writer</span>
+						<span class = "features__text d-block d-lg-none">AI</span>
+					</li>
+					<li class = "features__btn col">
+						<img class = "features__icon" src = "resources/img/icon-task.png" alt = "Tasking">
+						<span class = "features__text d-none d-lg-block">Tasks & Projects</span>
+						<span class = "features__text d-block d-lg-none">Tasks</span>
+					</li>
+					<li class = "features__btn col">
+						<img class = "features__icon" src = "resources/img/icon-pen.png" alt = "Documents">
+						<span class = "features__text d-none d-lg-block">Notes & Docs</span>
+						<span class = "features__text d-block d-lg-none">Notes</span>
+					</li>
+					<li class = "features__btn col">
+						<img class = "features__icon" src = "resources/img/icon-mapping.png" alt = "Mapping">
+						<span class = "features__text d-none d-lg-block">Mind Maps</span>
+						<span class = "features__text d-block d-lg-none">Maps</span>
+					</li>
+					<li class = "features__btn col">
+						<img class = "features__icon" src = "resources/img/icon-cam.png" alt = "Video Chatting">
+						<span class = "features__text d-none d-lg-block">Video Chat</span>
+						<span class = "features__text d-block d-lg-none">Chat</span>
+					</li>
+				</ul>
+				<div class = "features__slides">
+					<a class = "features__link" href = "javascript:void( 0 )">Try Instant Demo 🎉</a>
+					<img class = "features__slide" src = "resources/img/app-preview.png" alt = "App Preview"/>
+				</div>
+			</div>
+			<div class = "devices">
+				<h2 class = "devices__heading">Get Taskade On Any Device</h2>
+				<ul class = "devices__menu">
+					<li class = "devices__item">
+						<a class = "devices__link" href = "javascript:void( 0 )">
+							<div class = "devices__box"></div>
+							<span class = "devices__text"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</main>
 		<!-- Footer -->
 		<footer class = "footer">
