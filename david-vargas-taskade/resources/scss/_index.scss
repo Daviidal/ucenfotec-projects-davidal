@@ -131,6 +131,108 @@
 	}
 }
 
+.devices {
+	max-width: 120.0rem;
+	height: 30.9rem; // Taskade's default height
+	border-radius: 2.4rem;
+	background: rgba( 23, 25, 28, .6 );
+
+	&__heading {
+		font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
+		font-size: 1.8rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: .13em;
+		color: #ffffff;
+	}
+
+	&__menu {}
+
+	&__item {
+		padding: 0 !important; // Remove Bootstrap's default padding
+		&:not( :last-child ) { margin-right: 2.5rem; }
+	}
+
+	&__link {
+		display: block;
+
+		&--heading { margin-bottom: 3.5rem; }
+	}
+
+	&__box {
+		width: 6.4rem;
+		height: 6.4rem;
+		margin-bottom: 1.2rem;
+		border-radius: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		backdrop-filter: blur( 24px );
+		box-shadow: inset 0 0 2px hsla( 0,0%,100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
+		background-image: radial-gradient( circle at bottom,rgba( 91, 149, 191, .4 ) 0,hsla( 0, 0%, 9%, .8 ) 30%,rgba( 30, 30, 30, .8 ) 100% );
+
+		&:hover::after { opacity: 1; }
+
+		&::after {
+			border-radius: 2rem;
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			backdrop-filter: blur( 24px );
+			opacity: 0;
+			box-shadow: inset 0 0 2px hsla( 0, 0%, 100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
+			background-image: radial-gradient( circle at bottom,rgba( 210, 18, 11, .5 ) 0,hsla( 0, 0%, 9%, .8 ) 30%,rgba( 40, 40, 40,.8 ) 100% );
+			transition: opacity .1s linear;
+		}
+	}
+
+	&__box:hover &__icon {
+		background-image: url( '../svg/android-2.svg' );
+
+		&--android { background-image: url( '../svg/android-2.svg' ); }
+		&--ios { background-image: url( '../svg/ios-2.svg' ); }
+		&--mac { background-image: url( '../svg/mac.svg' ); }
+		&--windows { background-image: url( '../svg/windows-2.svg' ); }
+		&--linux { background-image: url( '../svg/linux-2.svg' ); }
+		&--chrome { background-image: url( '../svg/chrome-2.svg' ); }
+		&--firefox { background-image: url( '../svg/firefox-2.svg' ); }
+		&--edge { background-image: url( '../svg/edge-2.svg' ); }
+	}
+
+	&__icon {
+		width: 3rem;
+		height: 3rem;
+		background-image: url( '../svg/android-1.svg' );
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&--android { background-image: url( '../svg/android-1.svg' ); }
+		&--ios { background-image: url( '../svg/ios-1.svg' ); }
+		&--mac { background-image: url( '../svg/mac.svg' ); }
+		&--windows { background-image: url( '../svg/windows-1.svg' ); }
+		&--linux { background-image: url( '../svg/linux-1.svg' ); }
+		&--chrome { background-image: url( '../svg/chrome-1.svg' ); }
+		&--firefox { background-image: url( '../svg/firefox-1.svg' ); }
+		&--edge { background-image: url( '../svg/edge-1.svg' ); }
+	}
+
+	&__text {
+		display: block;
+		text-align: center;
+		font-size: 1.4rem;
+		color: rgb( 144, 152, 162 );
+	}
+}
+
+@media only screen and ( max-device-width: 1099px ) {
+	.devices {
+		&__menu { max-width: 40.0rem; }
+
+		&__item { margin: 1.6rem 2rem; }
+	}
+}
 @media only screen and ( max-device-width: 991px ) {
 	.main {
 		&__heading {
