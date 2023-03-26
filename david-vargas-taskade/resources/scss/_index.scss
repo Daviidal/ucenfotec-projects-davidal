@@ -37,6 +37,11 @@
 	}
 }
 
+.section {
+	&--banner { margin-bottom: 24.0rem; }
+	&--devices { margin-bottom: 24.0rem; }
+}
+
 .features {
 	margin-bottom: 4rem;
 
@@ -134,8 +139,30 @@
 .devices {
 	max-width: 120.0rem;
 	height: 30.9rem; // Taskade's default height
-	border-radius: 2.4rem;
-	background: rgba( 23, 25, 28, .6 );
+	margin: 0 auto;
+	position: relative;
+
+	&__background {
+		width: 100%;
+		height: 100%;
+		border-radius: 2.4rem;
+		position: absolute;
+		z-index: -1;
+		background: rgba( 23, 25, 28, .6 );
+	}
+
+	&__img {
+		position: absolute;
+
+		&--1 {
+			top: -15%;
+			right: -5%;
+		}
+		&--2 {
+			top: 80.3%;
+			left: -5%;
+		}
+	}
 
 	&__heading {
 		font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
@@ -149,7 +176,9 @@
 	&__menu {}
 
 	&__item {
+		max-width: 6.4rem;
 		padding: 0 !important; // Remove Bootstrap's default padding
+
 		&:not( :last-child ) { margin-right: 2.5rem; }
 	}
 
@@ -226,11 +255,64 @@
 	}
 }
 
+.tools {
+	&__header {
+		margin-bottom: 24.0rem;
+		position: relative;
+		text-align: center;
+
+		&:hover::after {
+			filter: blur( 140px );
+			opacity: .6;
+		}
+
+		&::after {
+			width: 90.0rem;
+			height: 50.0rem;
+			border-radius: 2rem;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			opacity: .4;
+			filter: blur( 100px );
+			pointer-events: none;
+			transform-origin: center center;
+			transform: skewY( -15deg ) translate( -50%,-50% ) scale( .7 ) translateZ( 0 );
+			background-image: linear-gradient( to right top, #6c22bd, #8b25bb, #a52bb9, #bc34b7, #d040b5, #e645a5, #f55195, #ff6188, #ff796e, #ff965b, #f5b255, #e1cd60 );
+			transition: filter .25s ease-in-out, opacity .25s ease-in-out;
+		}
+	}
+
+	&__heading {
+		max-width: 142.0rem;
+		margin: 0 auto 1.6rem auto;
+		padding: 0 20rem;
+		font-size: 10rem;
+		font-weight: 600;
+		letter-spacing: -.1rem;
+		color: #ffffff;
+	}
+
+	&__text {
+		max-width: 74rem;
+		margin: 0 auto;
+		padding: 0 2rem;
+		font-size: 2.4rem;
+		line-height: 3rem;
+		letter-spacing: -.05rem;
+		color: #9098a2;
+	}
+}
+
 @media only screen and ( max-device-width: 1099px ) {
 	.devices {
+		max-width: 70.0rem; // Taskade's default width for responsive
+		height: 60.0rem; // Taskade's default height for responsive
+
 		&__menu { max-width: 40.0rem; }
 
-		&__item { margin: 1.6rem 2rem; }
+		&__item { margin: 1.6rem 2rem !important; }
 	}
 }
 @media only screen and ( max-device-width: 991px ) {
@@ -246,3 +328,6 @@
 		&__btn { min-width: 7.8rem; }
 	}
 }
+// @media only screen and ( max-device-width: 759px ) {
+// 	.devices { background-color: ; }
+// }
