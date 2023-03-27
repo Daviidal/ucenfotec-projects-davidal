@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8"/>
+		<meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+		<link rel = "stylesheet" href = "resources/css/bootstrap.min.css"/>
+		<link rel = "stylesheet" href = "resources/css/main.css"/>
+		<title>Features | My Taskade</title>
+	</head>
+	<body class = "body">
+		<!-- Header -->
+		<header class = "header">
+			<div class = "header__wrapper d-flex align-items-center">
+				<!-- Logo -->
+				<a class = "header__logo" href = "index.html">
+					<img class = "header__icon" src = "resources/svg/logo-icon.svg" alt = "Logo's Icon"/>
+					<img class = "header__text" src = "resources/svg/logo-text.svg" alt = "Logo's Letters"/>
+				</a>
+				<!-- Navigation -->
+				<nav class = "nav d-none d-lg-block">
+					<!-- Main Menu -->
+					<ul class = "menu d-flex">
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Download Apps<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Instant Demo<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Features<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Updates<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Security<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Solutions<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s2">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Taskade AI<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Project Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Task Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Mind Mapping<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Remote Work<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Non-Profit<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Education<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Startup<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Learn<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Blog<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Support Articles<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Community<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Get Help<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Reviews<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Videos<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">FAQ<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item"><a class = "header__link" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu__item me-auto"><a class = "header__link" href = "javascript:void( 0 )">Pricing</a></li>
+					</ul>
+				</nav>
+				<!-- Buttons -->
+				<div class = "header__buttons ms-auto d-flex gap-4 align-items-center">
+					<a class = "header__link d-none d-xl-block" href = "javascript:void( 0 )">Contact Sales</a>
+					<a class = "header__link d-none d-xl-block" href = "javascript:void( 0 )">Log In</a>
+					<a class = "header__btn-signup header__btn-signup--1 d-none d-lg-block my-btn" href = "javascript:void( 0 )">Sign up for free</a>
+					<a class = "header__btn-signup header__btn-signup--2 d-block d-lg-none my-btn" href = "javascript:void( 0 )">Sign up</a>
+				</div>
+				<!-- Toggle -->
+				<label class = "toggle d-block d-lg-none" for = "hidden-menu">
+					<input id = "hidden-menu" class = "toggle__input" type = "checkbox"/>
+					<span class = "toggle__btn"></span>
+					<div class = "toggle__background"></div>
+					<!-- Toggle Menu -->
+					<ul class = "menu-toggle d-flex flex-column">
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Sign up for free</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Log in</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Home</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Downloads</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Blog</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">About</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Contact</a></li>
+					</ul>
+				</label>
+			</div>
+		</header>
+		<!-- Main -->
+		<main class = "main">
+			<!-- Plans -->
+			<section class = "section">
+				<div class = "plans">
+					<h1 class = "plans__heading heading heading--2"> <span class = "heading__gradient">Compare</span> plans and features.</h1>
+					<div class = "plans__tabs d-flex justify-content-center">
+						<button class = "plans__tab">Personal & Family</button>
+						<button class = "plans__tab plans__tab--active">Teams & Business</button>
+					</div>
+					<div class = "plans__wrapper">
+						<!-- Tiers -->
+						<div class = "plans__tiers row">
+							<div class = "plans__tier col-4"><!-- empty "col" so it can match the bottom lits --></div>
+							<div class = "plans__tier d-flex flex-column align-items-center col">
+								<span class = "plans__level">Pro</span>
+								<a class = "plans__link my-btn my-btn--empty d-none d-lg-block" href = "javascript:void( 0 )">Buy Now</a>
+							</div>
+							<div class = "plans__tier d-flex flex-column align-items-center col">
+								<span class = "plans__level">Business</span>
+								<a class = "plans__link my-btn my-btn--empty d-none d-lg-block" href = "javascript:void( 0 )">Buy Now</a>
+							</div>
+							<div class = "plans__tier d-flex flex-column align-items-center col">
+								<span class = "plans__level">Ultimate</span>
+								<a class = "plans__link my-btn my-btn--empty d-none d-lg-block" href = "javascript:void( 0 )">Buy Now</a>
+							</div>
+						</div>
+						<!-- Usage -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Usage</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Workspaces</span></div>
+								<div class = "plans__col col"><span class = "plans__text">5</span></div>
+								<div class = "plans__col col"><span class = "plans__text">20</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Team Members</span></div>
+								<div class = "plans__col col"><span class = "plans__text">20 included</span></div>
+								<div class = "plans__col col"><span class = "plans__text">50 included</span></div>
+								<div class = "plans__col col"><span class = "plans__text">100 included</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Tasks</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Projects</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">File Size</span></div>
+								<div class = "plans__col col"><span class = "plans__text">250 MB</span></div>
+								<div class = "plans__col col"><span class = "plans__text">500 MB</span></div>
+								<div class = "plans__col col"><span class = "plans__text">1 GB</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">File Storage</span></div>
+								<div class = "plans__col col"><span class = "plans__text">20 GB</span></div>
+								<div class = "plans__col col"><span class = "plans__text">100 GB</span></div>
+								<div class = "plans__col col"><span class = "plans__text">1,000 GB</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom Templates</span></div>
+								<div class = "plans__col col"><span class = "plans__text">25</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">AI Generations Per Month</span></div>
+								<div class = "plans__col col"><span class = "plans__text">50,000 words</span></div>
+								<div class = "plans__col col"><span class = "plans__text">250,000 words</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+						</ul>
+						<!-- Favorites -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Customer Favorites</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">500+ Templates</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Mobile Widgets</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">iOS, Android, Mac, Windows apps</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Real-time Collaboration & Video Chat</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Communication -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Communication</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Video Chat and Meetings</span></div>
+								<div class = "plans__col col"><span class = "plans__text">20 Attendees</span></div>
+								<div class = "plans__col col"><span class = "plans__text">100 Attendees</span></div>
+								<div class = "plans__col col"><span class = "plans__text">300 Attendees</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Chat and Messaging</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Screen Sharing</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Collaboration -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Collaboration</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Project Activity</span></div>
+								<div class = "plans__col col"><span class = "plans__text">6 months</span></div>
+								<div class = "plans__col col"><span class = "plans__text">1 year</span></div>
+								<div class = "plans__col col"><span class = "plans__text">5 year</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Version History</span></div>
+								<div class = "plans__col col"><span class = "plans__text">6 months</span></div>
+								<div class = "plans__col col"><span class = "plans__text">1 year</span></div>
+								<div class = "plans__col col"><span class = "plans__text">5 year</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Team Folders</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Collaborators Per Project</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Real-time Syncing</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Roadmap and Calendar</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Push Notifications</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Activity Feed</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Search</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Shareable Project Links</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Roles -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Roles for Collaboration</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Guests</span></div>
+								<div class = "plans__col col"><span class = "plans__text">25 per project</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Viewers</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+								<div class = "plans__col col"><span class = "plans__text">Unlimited</span></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Members</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Checkers</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Integrations -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Integrations</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Embed Projects Anywhere</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Embed Apps & Instant Preview</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Import and Export</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Calendar Feed Integration</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Embed Editable Projects</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Export as Image</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Google Calendar Integration</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Automations via Zapier</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Dropbox, Google Drive, One Drive</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Personalizations -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Personalizations</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Internationalization (15+ languages)</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom Branding</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Upload Logo</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Upload Backgrounds</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom Theme</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Administration -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Administration</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Data Encryption</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Regular Backups</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Google Single Sign-On</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">SAML-based single sign-on (SSO)</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Advanced authentication controls</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Unlimited Workspaces</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">SCIM user provisioning</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Audit Log</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Productivity -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Productivity</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Reminders & Due Dates</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Recurring Tasks</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Assign Tasks & Projects</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Task Commenting</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Move and Copy</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">@Mention People and Projects</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">#Tag Tasks and Projects</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Countdown Timer</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Backlinks</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Sort Projects & Tasks</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom Repeat Interval</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Bulk Assign Tasks</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Bulk Due Dates</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Bulk AI Assistant</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Views -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Project Views</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">List View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Board View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Calendar View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Mind Map View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Action View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Org Chart View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom Formatting</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Support -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Support</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Self-serve Knowledge Base</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">24 / 7 Support</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">On-demand Webinars</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Priority Support</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Onboarding and Training</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+						<!-- Soon -->
+						<ul class = "plans__list">
+							<li class = "plans__item"><span class = "plans__title">Coming soon!</span></li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Gantt Chart View</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Time Tracker</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Email to Taskade</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Schedule Templates & Projects</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Advanced Reporting</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+							<li class = "plans__item row">
+								<div class = "plans__col col-4"><span class = "plans__name">Custom URL & Domain (CNAME)</span></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--no"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+								<div class = "plans__col col"><div class = "plans__icon plans__icon--yes"></div></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- Devices -->
+			<section class = "section">	
+				<div class = "platforms platforms--small devices d-flex flex-column justify-content-center align-items-center">
+					<div class = "devices__background d-none d-md-block">
+						<img class = "devices__img devices__img--1" src = "resources/img/misc/download-dots.png" alt = "Download Dots"/>
+						<img class = "devices__img devices__img--2" src = "resources/img//misc/semi-circles.png" alt = "Semi Circles"/>
+					</div>
+					<a class = "platforms__link platforms__link--heading" href = "javascript:void( 0 )">
+						<h4 class = "platforms__heading heading heading--4">Get Taskade On Any Device</h4>
+					</a>
+					<ul class = "platforms__menu devices__menu row justify-content-center">
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--android"></div>
+								</div>
+								<span class = "platforms__name">Android</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--ios"></div>
+								</div>
+								<span class = "platforms__name">iOS</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--mac"></div>
+								</div>
+								<span class = "platforms__name">Mac</span>
+							</a>
+						</li>
+						<li class = "d-block d-lg-none w-100"></li> <!-- Breakpoint -->
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--windows"></div>
+								</div>
+								<span class = "platforms__name">Windows</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--linux"></div>
+								</div>
+								<span class = "platforms__name">Linux (x86)</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--linux"></div>
+								</div>
+								<span class = "platforms__name">Linux (ARM)</span>
+							</a>
+						</li>
+						<li class = "d-block d-lg-none w-100"></li> <!-- Breakpoint -->
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--chrome"></div>
+								</div>
+								<span class = "platforms__name">Chrome</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--firefox"></div>
+								</div>
+								<span class = "platforms__name">Firefox</span>
+							</a>
+						</li>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--edge"></div>
+								</div>
+								<span class = "platforms__name">Edge</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- FAQ -->
+			<section class = "section">
+				<div class = "faq">
+					<div class = "faq__header">
+						<h3 class = "faq__heading heading heading--3">Frequently Asked Questions</h3>
+						<p class = "faq__text">Can’t find the answer you’re looking for? Please visit our <a class = "faq__link" href = "javascript:void( 0 )">Help Center</a>.</p>
+					</div>
+					<div class = "faq__row row">
+						<div class = "faq__col col-12 col-lg-6">
+							<ul class = "faq__list">
+								<li class = "faq__item"><span class = "faq__question">Can I use Taskade to create mind maps?</span></li>
+								<li class = "faq__item"><span class = "faq__question">How can I better organize my life and work with Taskade?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Can I make my calendar shared and -6laborative?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Are my to-do lists and task lists cross-platform in Taskade?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Can I share a direct read-only link to my online calendar planner and weekly to-do list?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Can I use Taskade for task management on a project?</span></li>
+							</ul>
+						</div>
+						<div class = "faq__col col-12 col-lg-6">
+							<ul class = "faq__list">
+								<li class = "faq__item"><span class = "faq__question">Does Taskade have Templates?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Are Taskade’s to-do lists printable?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Can I use Taskade as just a to-do list app?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Is there subtask and checklist functionality in Taskade?</span></li>
+								<li class = "faq__item"><span class = "faq__question">Can I implement specific productivity methods like Pomodoro, Getting Things Done (GTD), Kanban, or Build a Second Brain in Taskade?</span></li>
+							</ul>
+						</div>
+					</div>
+					<button class = "my-btn my-btn--empty faq__btn">See all ↗</button>
+				</div>
+			</section>
+			<!-- Companies -->
+			<section class = "section">
+				<div class = "companies">
+					<h2 class = "companies__heading">Trusted and loved by teams at:</h2>
+					<ul class = "companies__list row justify-content-center">
+						<li class = "companies__company companies__company--lyft"></li>
+						<li class = "companies__company companies__company--trasnfer"></li>
+						<li class = "w-100 d-block d-xl-none d-md-none"></li><!-- Breakpoint -->
+						<li class = "companies__company companies__company--compass"></li>
+						<li class = "w-100 d-none d-xl-none d-md-block"></li><!-- Breakpoint -->
+						<li class = "companies__company companies__company--netflix"></li>
+						<li class = "w-100 d-block d-xl-none d-md-none"></li><!-- Breakpoint -->
+						<li class = "companies__company companies__company--booking"></li>
+						<li class = "companies__company companies__company--sony"></li>
+					</ul>
+				</div>
+			</section>
+			<!-- Suscribe -->
+			<section class = "section">
+				<div class = "contact">
+					<div class = "contact__wrapper d-flex flex-column align-items-center">
+						<h2 class = "contact__heading heading heading--3">Got a question? <span class = "heading__gradient">Get in touch.</span></h2>
+						<a class = "my-btn contact__btn" href = "javascript:void( 0 )">Contact us</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class = "footer">
+			<div class = "footer__row footer__row--top">
+				<div class = "footer__wrapper footer__wrapper--1 row">
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Taskade</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">About</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Press</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Jobs</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">FAQ</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Reviews</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Compare</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Help Center</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Community Forum</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Affiliate Partners</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Server Status</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Integrations</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Contact</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Downloads</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Android</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">iOS</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mac</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mac App Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Windows</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Microsoft Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Linux (x86)</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Linux (ARM)</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Snap Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Chrome</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Firefox</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Edge</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Designed For</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Remote Work</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Task Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI Writing</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Education</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Outlining</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Startups</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Designers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Agencies</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Marketers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mind Mapping</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Video Chat</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Nonprofits</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Developers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Writers</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Featured</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">ChatGPT</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Personal</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Project Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Task Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Engineering</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Education</a></li>
+						<li class = "footer__item"><span class = "footer__btn">See all ▼</span></li>
+						<li class = "footer__item">
+							<ul class = "footer__menu">
+								<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Generate</a></li>
+								<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI</a></li>
+								<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI Content</a></li>
+								<li class = "footer__item"><span class = "footer__btn">See all ▼</span></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Blog</a></li>
+						<li class = "footer__item"><a href = "javascript:void( 0 )"><img class = "footer__img" src = "resources/img/blog.jpg" alt = "Blog's Image"/></a></li>
+						<li class = "footer__item"><a class = "footer__mobile" href = "javascript:void( 0 )">🤖 Taskade AI — Now Available on iOS & Android. Supercharge your workflow on Mobile & Tablet.</a></li>
+						<li class = "footer__item"><span class = "footer__btn">More Posts ▼</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class = "footer__row footer__row--bottom">
+				<div class = "footer__wrapper footer__wrapper--2 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-center">
+					<div class = "footer__col">
+						<span class = "footer__message">Made with ❤️ in Cost Rica</span>
+						<div class = "footer__row">
+							<a class = "footer__legal" href = "javascript:void( 0 )">© 2023 Taskade.</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Privacy</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Terms</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Security</a>
+						</div>
+					</div>
+					<div class = "footer__col d-flex">
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/reddit.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/youtube.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/github.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/instagram.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/twitter.svg" alt = ""></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="resources/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

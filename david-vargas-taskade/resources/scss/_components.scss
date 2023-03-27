@@ -15,9 +15,19 @@
 
 	&--3 {
 		margin-bottom: 1.6rem;
-		font-size: 4.8rem;
+		font-size: 4.2rem;
 		font-weight: 600;
 		line-height: 125%;
+	}
+
+	&--4 {
+		margin-bottom: 1.6rem;
+		font-family: var( --font-monospace );
+		font-size: 1.8rem;
+		font-weight: 900;
+		line-height: 120%;
+		letter-spacing: .13em;
+		text-transform: uppercase;
 	}
 
 	&__gradient {
@@ -37,7 +47,7 @@
 	outline: 0;
 	display: block;
 	font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	font-weight: 600;
 	color: #ffffff;
 	background-color: #ff2d60;
@@ -177,22 +187,8 @@
 	&__header { margin-bottom: 4rem; }
 
 	&__heading {
-		text-align: center;
+		margin-bottom: 0;
 		color: var( --color-white );
-
-		// &--2 {
-		// 	font-family: var( --font-sans-serif );
-		// 	font-size: 4.2rem;
-		// 	font-weight: 700;
-		// 	line-height: 128%;
-		// }
-		// &--3 {
-		// 	font-family: var( --font-monospace );
-		// 	font-size: 1.8rem;
-		// 	font-weight: 900;
-		// 	letter-spacing: .13em;
-		// 	text-transform: uppercase;
-		// }
 	}
 
 	&__text {
@@ -287,6 +283,33 @@
 	}
 }
 
+/* DEVICES */
+.devices {
+	height: 30.9rem; // Taskade's default height
+	position: relative;
+
+	&__background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&__img {
+		position: absolute;
+
+		&--1 {
+			top: -15%;
+			right: -5%;
+		}
+
+		&--2 {
+			top: 80.3%;
+			left: -5%;
+		}
+	}
+}
+
 /* FAQ */
 .faq {
 	max-width: 110.0rem;
@@ -359,6 +382,38 @@
 	}
 }
 
+/* COMPANIES */
+.companies {
+	&__heading {
+		margin-bottom: 4rem;
+		font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
+		font-weight: 500;
+		letter-spacing: .13em;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__list { margin: 0; } // Remove Bootstrap's default margin on rows
+
+	&__company {
+		width: 20.0rem;
+		height: 12.0rem;
+		padding: 0 !important; // Remove Bootstrap's default padding
+		border: 1px solid rgb( 44, 48, 53 );
+		background: rgb( 5, 5, 5 );
+
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&--lyft { background-image: url( '../img/logos/lyft.svg' ); }
+		&--trasnfer { background-image: url( '../img/logos/transfer-wise.svg' ); }
+		&--compass { background-image: url( '../img/logos/compass.svg' ); }
+		&--netflix { background-image: url( '../img/logos/netflix.svg' ); }
+		&--booking { background-image: url( '../img/logos/booking-com.svg' ); }
+		&--sony { background-image: url( '../img/logos/sony.svg' ); }
+	}
+}
+
 /* SUSCRIBE */
 .suscribe {
 	border-top: 1px solid rgb( 44, 48, 53 );
@@ -414,9 +469,29 @@
 	}
 }
 
+/* CONTACT */
+.contact {
+	border-top: 1px solid rgb( 44, 48, 53 );
+	border-bottom: 1px solid rgb( 44, 48, 53 );
+
+	&__wrapper { padding: 11.6rem 0; }
+
+	&__heading { margin-bottom: 5rem; }
+
+	&__btn {
+		padding: 1.8rem 2.4rem;
+		border-radius: .8rem;
+	}
+}
+
 /*************************************************************************************************************************************************************************/
 
 @media only screen and ( max-device-width: 991px ) {
+	.heading {
+		&--2 { font-size: 4.2rem; }
+		&--3 { font-size: 3.8rem; }
+	}
+
 	.platforms {
 		&__item { max-width: 6.4rem; }
 

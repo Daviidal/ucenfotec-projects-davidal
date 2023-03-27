@@ -146,33 +146,6 @@
 	}
 }
 
-/* DEVICES */
-.devices {
-	height: 30.9rem; // Taskade's default height
-	position: relative;
-
-	&__background {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: -1;
-	}
-
-	&__img {
-		position: absolute;
-
-		&--1 {
-			top: -15%;
-			right: -5%;
-		}
-
-		&--2 {
-			top: 80.3%;
-			left: -5%;
-		}
-	}
-}
-
 /* LANDING CARDS */
 .landing-cards {
 	&__header {
@@ -399,36 +372,6 @@
 
 	&__icon {
 		display: block;
-	}
-}
-
-/* COMPANIES */
-.companies {
-	&__heading {
-		margin-bottom: 4rem;
-		font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
-		font-weight: 500;
-		letter-spacing: .13em;
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-	&__company {
-		width: 20.0rem;
-		height: 12.0rem;
-		padding: 0 !important; // Remove Bootstrap's default padding
-		border: 1px solid rgb( 44, 48, 53 );
-		background: rgb( 5, 5, 5 );
-
-		background-repeat: no-repeat;
-		background-position: center;
-
-		&--lyft { background-image: url( '../img/logos/lyft.svg' ); }
-		&--trasnfer { background-image: url( '../img/logos/transfer-wise.svg' ); }
-		&--compass { background-image: url( '../img/logos/compass.svg' ); }
-		&--netflix { background-image: url( '../img/logos/netflix.svg' ); }
-		&--booking { background-image: url( '../img/logos/booking-com.svg' ); }
-		&--sony { background-image: url( '../img/logos/sony.svg' ); }
 	}
 }
 
