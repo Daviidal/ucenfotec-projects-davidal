@@ -93,7 +93,7 @@
 		<!-- Main -->
 		<main class = "main">
 			<!-- Banner -->
-			<section class = "section section--banner">
+			<section class = "section">
 				<h1 class = "main__heading">Build a second brain for your teams.</h1>
 				<div class = "features d-flex flex-column align-items-center">
 					<ul class = "features__buttons row">
@@ -130,7 +130,7 @@
 				</div>
 			</section>
 			<!-- Devices -->
-			<section class = "section section--banner">	
+			<section class = "section">	
 				<div class = "devices d-flex flex-column justify-content-center align-items-center">
 					<div class = "devices__background d-none d-md-block">
 						<img class = "devices__img devices__img--1" src = "resources/img/download-dots.png" alt = "Download Dots"/>
@@ -216,13 +216,241 @@
 				</div>
 			</section>
 			<!-- Tools -->
-			<section class = "section section--tools">
-				<div class = "tools">
-					<div class = "tools__header">
-						<h2 class = "tools__heading">The next generation of team collaboration.</h2>
-						<p class = "tools__text">Five tools in one to help you stay organized and get work done. No more getting lost in tabs. With Taskade, all your work is in one place.</p>
+			<section class = "section">
+				<div class = "landing-cards">
+					<div class = "landing-cards__header d-none d-lg-block">
+						<h2 class = "landing-cards__heading landing-cards__heading--2">The next generation of team collaboration.</h2>
+						<p class = "landing-cards__text">Five tools in one to help you stay organized and get work done. No more getting lost in tabs. With Taskade, all your work is in one place.</p>
 					</div>
-					<ul class = "tools__list"></ul>
+					<ul class = "landing-cards__list">
+						<li class = "landing-cards__item row justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">AI Content Writer</h3>
+								<p class = "landing-cards__description">Create amazing content 10x faster, generate instant outlines and more for your projects.</p>
+								<h4 class = "landing-cards__heading landing-cards__heading--4">Replaces</h4>
+								<div class = "landing-cards__replaces d-flex">
+									<img class = "landing-cards__tool" src = "resources/img/icons/chatgpt.png" alt = "Replace ChatGPT"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/jasper.png" alt = "Replace Jasper"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/copyai.png" alt = "Replace copy.ai"/>
+								</div>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6">
+								<!-- The video did not load on the original Taskade so this will look empty -->
+								<!-- Added the video tag only to have a similar height to Taskade -->
+								<video autoplay = "" loop = "" muted = "" width = "100%" height = "auto"></video>
+							</div>
+						</li>
+						<li class = "landing-cards__item row flex-row-reverse justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Tasks and Projects</h3>
+								<p class = "landing-cards__description">List, board, calendar, mind map, org chart, and action views. Customize your workflow.</p>
+								<div class = "landing-cards__menu d-flex">
+									<button class = "landing-cards__btn landing-cards__btn--active">
+										<img class = "landing-cards__icon" src = "resources/img/icons/agenda.png" alt = "Agenda"/>
+									</button>
+									<button class = "landing-cards__btn">
+										<img class = "landing-cards__icon" src = "resources/img/icons/roadmap.png" alt = "Roadmap"/>
+									</button>
+									<button class = "landing-cards__btn">
+										<img class = "landing-cards__icon" src = "resources/img/icons/overview.png" alt = "Overview"/>
+									</button>
+									<button class = "landing-cards__btn">
+										<img class = "landing-cards__icon" src = "resources/img/icons/plans.png" alt = "Plans"/>
+									</button>
+									<button class = "landing-cards__btn">
+										<img class = "landing-cards__icon" src = "resources/img/icons/brainstorm.png" alt = "Brainstorm"/>
+									</button>
+									<button class = "landing-cards__btn">
+										<img class = "landing-cards__icon" src = "resources/img/icons/brainstorm.png" alt = "Brainstorm"/>
+									</button>
+								</div>
+								<h4 class = "landing-cards__heading landing-cards__heading--4">Replaces</h4>
+								<div class = "landing-cards__replaces d-flex">
+									<img class = "landing-cards__tool" src = "resources/img/icons/trello.png" alt = "Replace Trello"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/asana.png" alt = "Replace Asana"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/monday.png" alt = "Replace Monday"/>
+								</div>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-tasks-n-projects.png" alt = "Taskade Project Views To-Do List Mindmap Kanban"/></div>
+						</li>
+						<li class = "landing-cards__item row justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Notes and Docs</h3>
+								<p class = "landing-cards__description">A simple, structured writing experience with unlimited hierarchy and collaborative editing.</p>
+								<h4 class = "landing-cards__heading landing-cards__heading--4">Replaces</h4>
+								<div class = "landing-cards__replaces d-flex">
+									<img class = "landing-cards__tool" src = "resources/img/icons/notion.png" alt = "Replace Notion"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/google-docs.png" alt = "Replace Google Docs"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/obsidian.png" alt = "Replace Obsidian"/>
+								</div>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-docs.png" alt = "Realtime Collaboration Workspace"/></div>
+						</li>
+						<li class = "landing-cards__item row flex-row-reverse justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Mind Maps</h3>
+								<p class = "landing-cards__description">Organize anything, transform ideas into action items and track progress in multiple views.</p>
+								<h4 class = "landing-cards__heading landing-cards__heading--4">Replaces</h4>
+								<div class = "landing-cards__replaces d-flex">
+									<img class = "landing-cards__tool" src = "resources/img/icons/miro.png" alt = "Replace Miro"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/lucidchart.png" alt = "Replace Lucidchart"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/whimsical.png" alt = "Replace Whimsical"/>
+								</div>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-mind-maps.png" alt = "Task Management App"/></div>
+						</li>
+						<li class = "landing-cards__item row justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Video and Chat</h3>
+								<p class = "landing-cards__description">Have great meetings with built-in video chat, screen sharing, and real-time collaboration.</p>
+								<h4 class = "landing-cards__heading landing-cards__heading--4">Replaces</h4>
+								<div class = "landing-cards__replaces d-flex">
+									<img class = "landing-cards__tool" src = "resources/img/icons/slack.png" alt = "Replace Slack"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/zoom.png" alt = "Replace Zoom"/>
+									<img class = "landing-cards__tool" src = "resources/img/icons/teams.png" alt = "Replace Teams"/>
+								</div>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-video-n-chat.png" alt = "Video and Chat App"/></div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Share -->
+			<section class = "section">
+				<div class = "landing-cards">
+					<div class = "landing-cards__header">
+						<h2 class = "landing-cards__heading landing-cards__heading--2">Share here, there, and everywhere.</h2>
+						<p class = "landing-cards__text">Shareable links make it easy to send projects for review or hop on a real-time chat and video call with stakeholders anywhere.</p>
+					</div>
+					<ul class = "landing-cards__list">
+						<li class = "landing-cards__item row justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Unlimited Sharing</h3>
+								<p class = "landing-cards__description">Easily share projects with guests, clients, and teams to chat and collaborate, all in one place.</p>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-sharing.png" alt = "Taskade Calendar App"/></div>
+						</li>
+						<li class = "landing-cards__item row flex-row-reverse justify-content-center align-items-center">
+							<div class = "landing-cards__info landing-cards__info--left col-12 col-lg-4">
+								<h3 class = "landing-cards__heading landing-cards__heading--3">Multiple Teams</h3>
+								<p class = "landing-cards__description">Manage multiple projects and teams with ease with secure and separate workspaces.</p>
+							</div>
+							<div class = "landing-cards__figure col-12 col-lg-6"><img width = "100%" class = "landing-cards__img" src = "resources/img/backdrops/app-preview-multiple-teams.png" alt = "Task Management App"/></div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Top Reviews -->
+			<section class = "section">
+				<div class = "reviews">
+					<div class = "reviews__header d-flex flex-column flex-lg-row justify-content-between align-items-center">
+						<h2 class = "reviews__heading">Loved by modern teams around the world.</h2>
+						<a class = "my-btn my-btn--empty reviews__link" href = "javascript:void( 0 )">More customer stories ↗</a>
+					</div>
+					<ul class = "reviews__comments row">
+						<li class = "reviews__item col-12 col-lg">
+							<p class = "reviews__text">I absolutely love Taskade. I run an online shop, an Etsy shop, and a blog in different workspaces. I'm able to organize product ideas, to-do lists, blog posts, events, and so much more in different views for each. I love dragging things between Kanban-style layouts, but being able to see everything due in calendar view and just having straight-up to-do lists is so helpful.</p>
+							<div class = "reviews__user">
+								<img class = "reviews__profile" src = "resources/img/icons/taskader-1.png" alt = "Profile Picture"/>
+								<span class = "reviews__name">Sarah Dodge</span>
+							</div>
+						</li>
+						<li class = "reviews__item col-12 col-lg">
+							<p class = "reviews__text">Most of the project management tools do not come with an option to have a video call. Taskade has chat and video conferencing already built-in, which saves us money and time. Yeah, you might use Zoom or Webex, but again you need to take notes in a separate sheet. Taskade has it all. Also very easy to use, even for non-tech guys.</p>
+							<div class = "reviews__user">
+								<img class = "reviews__profile" src = "resources/img/icons/taskader-2.png" alt = "Profile Picture"/>
+								<span class = "reviews__name">Profesor Olman</span>
+							</div>
+						</li>
+						<li class = "reviews__item col-12 col-lg">
+							<p class = "reviews__text">Taskade is an excellent software for managing my daily to-do list and collaborating on tasks with my team members. The communication platform lets me chat and have a quick video call with members in my contact list. The Mindmap-like project structure gave us a more extensive insight into all the assets and workload involved in the project.</p>
+							<div class = "reviews__user">
+								<img class = "reviews__profile" src = "resources/img/icons/taskader-3.png" alt = "Profile Picture"/>
+								<span class = "reviews__name">Nozihan I</span>
+							</div>
+						</li>
+					</ul>
+					<div class = "reviews__buttons d-flex justify-content-center">
+						<button class = "reviews__btn reviews__btn--active"><img class = "reviews__icon" src = "resources/img/icons/dot.svg" alt = "Dot"/></button>
+						<button class = "reviews__btn"><img class = "reviews__icon" src = "resources/img/icons/dot.svg" alt = "Dot"/></button>
+						<button class = "reviews__btn"><img class = "reviews__icon" src = "resources/img/icons/dot.svg" alt = "Dot"/></button>
+						<button class = "reviews__btn"><img class = "reviews__icon" src = "resources/img/icons/dot.svg" alt = "Dot"/></button>
+						<button class = "reviews__btn"><img class = "reviews__icon" src = "resources/img/icons/dot.svg" alt = "Dot"/></button>
+					</div>
+				</div>
+			</section>
+			<!-- Workflows -->
+			<section class = "section">
+				<div class = "cards">
+					<h2 class = "cards__heading">One platform to unite all your workflows.</h2>
+					<div class = "cards__list row">
+						<div class = "cards__glare"></div> <!-- Glare Effect -->
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-1.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">A simpler project workflow</h3>
+								<p class = "cards__text">Automate work processes by creating custom templates for your teams. Say goodbye to repetitive workflows and project creation.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-2.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Repeat task dates with ease</h3>
+								<p class = "cards__text">Set up recurring tasks with ease and keep everyone in the loop. Get task reminders via email, browser, desktop, and mobile.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-3.gif" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Level up with /slash commands</h3>
+								<p class = "cards__text">Simply type “/” to access a range of commands, including adding due dates, changing formats, and creating new blocks.</p>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-4.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Add tasks with natural language</h3>
+								<p class = "cards__text">With Taskade’s natural language recognition and recurring task options, quickly add due dates to your tasks and get more done.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-5.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Think with drag and drop</h3>
+								<p class = "cards__text">Organize your tasks and notes with Taskade’s versatile editor. Outline your ideas and rearrange them in any order to keep your tasks on track.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-6.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Manage multiple teams</h3>
+								<p class = "cards__text">Taskade makes it easy to manage and organize your projects and teams across multiple workspaces.</p>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-7.gif" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Embed your favorite tools</h3>
+								<p class = "cards__text">Upload from Google Drive, Dropbox, and more or simply embed content from tools like Youtube, Loom, and more.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-8.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Customize your homescreen</h3>
+								<p class = "cards__text">Stay productive on-the-go with Taskade’s mobile widgets. Access your tasks, projects, and workflows right from your home screen.</p>
+							</div>
+						</div>
+						<div class = "cards__col col-12 col-md-6 col-lg">
+							<div class = "cards__card">
+								<img class = "cards__img" src = "resources/img/cards/landing/workflow-9.png" alt = "Card Backdrop"/>
+								<h3 class = "cards__name">Sync across devices</h3>
+								<p class = "cards__text">Take Taskade with you anywhere with real-time sync across all your devices and team members. Available on iOS, Android, Mac, PC and more.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
