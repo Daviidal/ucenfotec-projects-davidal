@@ -1,3 +1,19 @@
+/* TOP MESSAGE */
+.top-msg {
+	padding: .8rem 2rem;
+	background-color: rgba( 93, 39, 67, .3 );
+
+	&__link {
+		margin-right: 1.2rem;
+		color: var( --color-white );
+
+		&:hover { color: var( --color-primary-60 ); }
+	}
+
+	&__bold { font-weight: bolder; }
+}
+
+/* MAIN */
 .main {
 	padding-top: 4rem;
 
@@ -29,18 +45,13 @@
 			filter: blur( 100px) ;
 			pointer-events: none;
 			opacity: .4;
-			background-image: linear-gradient(to right top,#6c22bd,#8b25bb,#a52bb9,#bc34b7,#d040b5,#e645a5,#f55195,#ff6188,#ff796e,#ff965b,#f5b255,#e1cd60);
+			background-image: var( --gradient-1 );
 			transition: filter .25s ease-in-out, opacity .25s ease-in-out;
 		}
 	}
 }
 
-.section {
-	&:not( :last-child ) { margin-bottom: 24.0rem; }
-
-	&--banner { padding: 0 2rem; }
-}
-
+/* FEATURES */
 .features {
 	margin-bottom: 4rem;
 
@@ -70,14 +81,14 @@
 	&__btn--active &__icon { opacity: 1; }
 	
 	&__icon {
-		height: 2.0rem;
+		height: 2rem;
 		display: block;
 		opacity: .5;
 		transition: opacity 150ms ease-in-out 0s;
 	}
 
-	&__btn:hover &__text { color: rgb( 255, 255, 255 ); }
-	&__btn--active &__text { color: rgb( 255, 255, 255 ); }
+	&__btn:hover &__text { color: var( --color-white ); }
+	&__btn--active &__text { color: var( --color-white ); }
 
 	&__text {
 		white-space: nowrap;
@@ -102,7 +113,7 @@
 			opacity: 0.67;
 			filter: blur( 185px );
 			will-change: transform;
-			background-image: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
+			background-image: var( --gradient-radial-1 );
 		}
 	
 	}
@@ -128,13 +139,14 @@
 		font-weight: 600;
 		white-space: nowrap;
 		color: rgb( 0, 0, 0 );
-		background: rgb( 255, 255, 255 );
+		background-color: var( --color-white );
 		transition: opacity 200ms ease-in-out 0s;
 
 		&:hover { color: rgb( 0, 0, 0, .7 ); }
 	}
 }
 
+/* DEVICES */
 .devices {
 	max-width: 120.0rem;
 	height: 30.9rem; // Taskade's default height
@@ -147,7 +159,7 @@
 		border-radius: 2.4rem;
 		position: absolute;
 		z-index: -1;
-		background: rgba( 23, 25, 28, .6 );
+		background-color: rgba( 23, 25, 28, .6 );
 	}
 
 	&__img {
@@ -157,6 +169,7 @@
 			top: -15%;
 			right: -5%;
 		}
+
 		&--2 {
 			top: 80.3%;
 			left: -5%;
@@ -164,18 +177,19 @@
 	}
 
 	&__heading {
-		font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
+		font-family: var( --font-monospace );
 		font-size: 1.8rem;
 		font-weight: 900;
 		text-transform: uppercase;
 		letter-spacing: .13em;
-		color: #ffffff;
+		color: var( --color-white );
 	}
 
 	&__menu {}
 
 	&__item {
 		max-width: 6.4rem;
+		padding: 0 !important; // Remove Bootstrap's default padding
 
 		&:not( :last-child ) { margin-right: 2.5rem; }
 	}
@@ -209,8 +223,8 @@
 			inset: 0;
 			backdrop-filter: blur( 24px );
 			opacity: 0;
-			box-shadow: inset 0 0 2px hsla( 0, 0%, 100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
 			background-image: radial-gradient( circle at bottom,rgba( 210, 18, 11, .5 ) 0,hsla( 0, 0%, 9%, .8 ) 30%,rgba( 40, 40, 40,.8 ) 100% );
+			box-shadow: inset 0 0 2px hsla( 0, 0%, 100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
 			transition: opacity .1s linear;
 		}
 	}
@@ -247,12 +261,14 @@
 
 	&__text {
 		display: block;
-		text-align: center;
 		font-size: 1.4rem;
-		color: rgb( 144, 152, 162 );
+		text-align: center;
+		line-height: 1.6rem;
+		color: var( --color-gray );
 	}
 }
 
+/* LANDING CARDS */
 .landing-cards {
 	&__header {
 		margin-bottom: 24.0rem;
@@ -414,6 +430,7 @@
 	}
 }
 
+/* REVIEWS */
 .reviews {
 	&__header {
 		max-width: 140.0rem;
@@ -480,92 +497,7 @@
 	}
 }
 
-.cards {
-	max-width: 140.0rem;
-	margin: 0 auto;
-	padding: 0 2rem;
-
-	&__heading {
-		margin-bottom: 8rem;
-		position: relative;
-		font-size: 4.8rem;
-		font-weight: 600;
-		text-align: center;
-		color: #ffffff;
-
-		&::after {
-			content: '';
-			transform-origin: center center;
-			background-image: linear-gradient(to right top,#6c22bd,#8b25bb,#a52bb9,#bc34b7,#d040b5,#e645a5,#f55195,#ff6188,#ff796e,#ff965b,#f5b255,#e1cd60);
-			position: absolute;
-			left: 50%;
-			border-radius: 20px;
-			transform: skewY(-15deg) translate(-50%,-50%) scale(.7) translateZ(0);
-			pointer-events: none;
-			width: 900px;
-			height: 500px;
-			filter: blur(100px);
-			opacity: .4;
-			top: 0;
-			transition: filter .25s ease-in-out,opacity .25s ease-in-out;
-		}
-	}
-
-	&__list { position: relative; }
-
-	&__glare {
-		width: 100%;
-		position: absolute;
-		top: 5%;
-		bottom: -10%;
-		margin: 0px auto;
-		z-index: -1;
-
-		&::after {
-			content: '';
-			display: block;
-			width: 700px;
-			height: 700px;
-			transition: opacity 0.6s ease-in-out 0s, transform 0.6s ease-in-out 0s;
-			position: sticky;
-			top: 50%;
-			left: 25%;
-			background: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
-			opacity: 0.67;
-			filter: blur(155px);
-			will-change: transform;
-			border-radius: 275px;
-		}
-	}
-
-	&__col { padding: .8rem !important; }
-
-	&__card {
-		height: 100%;
-		padding: 3rem;
-		border-radius: 2rem;
-		backdrop-filter: blur( 3px );
-		background: rgba( 16, 17, 19, .7 );
-		box-shadow: rgba( 255, 255, 255, .1 ) 0 1px 3px inset, rgba( 255, 255, 255, 0 ) 0 -1px 3px inset;
-	}
-
-	&__img {
-		max-width: 100%;
-		margin-bottom: 2.4rem;
-		border-radius: 1rem;
-		display: block;
-	}
-
-	&__name {
-		margin-bottom: 1.2rem;
-		font-size: 2.4rem;
-		font-weight: 600;
-		color: #ffffff;
-	}
-
-	&__text { color: #9098a2; }
-}
-
+/* COMPANIES */
 .companies {
 	&__heading {
 		margin-bottom: 4rem;
@@ -595,6 +527,7 @@
 	}
 }
 
+/* SUSCRIBE */
 .suscribe {
 	border-top: 1px solid rgb( 44, 48, 53 );
 	border-bottom: 1px solid rgb( 44, 48, 53 );
@@ -663,6 +596,7 @@
 	}
 }
 
+/*************************************************************************************************************************************************************************/
 
 @media only screen and ( max-device-width: 1099px ) {
 	.devices {

@@ -1,0 +1,113 @@
+/* BUTTON */
+.my-btn {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	display: block;
+	font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+	font-size: 1.7rem;
+	font-weight: 600;
+	color: #ffffff;
+	background-color: #ff2d60;
+	transition: color 200ms ease-in-out 0s, background-color 200ms ease-in-out 0s, border-color 200ms ease-in-out 0s;
+
+	&:hover { background-color: #ff426f; }
+	
+	&--empty {
+		border: 1px solid hsla( 0, 0%, 98%, .4 );
+		background-color: transparent;
+		transition: color 200ms ease-in-out 0s, background-color 200ms ease-in-out 0s, border-color 200ms ease-in-out 0s;
+
+		&:hover {
+			border-color: #ff2d60;
+			background-color: #ff2d60;
+		}
+	}
+}
+
+/* CARDS */
+.cards {
+	max-width: 140.0rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	&__heading {
+		margin-bottom: 8rem;
+		position: relative;
+		font-size: 4.8rem;
+		font-weight: 600;
+		text-align: center;
+		color: #ffffff;
+
+		&::after {
+			content: '';
+			transform-origin: center center;
+			background-image: linear-gradient(to right top,#6c22bd,#8b25bb,#a52bb9,#bc34b7,#d040b5,#e645a5,#f55195,#ff6188,#ff796e,#ff965b,#f5b255,#e1cd60);
+			position: absolute;
+			left: 50%;
+			border-radius: 20px;
+			transform: skewY(-15deg) translate(-50%,-50%) scale(.7) translateZ(0);
+			pointer-events: none;
+			width: 900px;
+			height: 500px;
+			filter: blur(100px);
+			opacity: .4;
+			top: 0;
+			transition: filter .25s ease-in-out,opacity .25s ease-in-out;
+		}
+	}
+
+	&__list { position: relative; }
+
+	&__glare {
+		width: 100%;
+		position: absolute;
+		top: 5%;
+		bottom: -10%;
+		margin: 0px auto;
+		z-index: -1;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 700px;
+			height: 700px;
+			transition: opacity 0.6s ease-in-out 0s, transform 0.6s ease-in-out 0s;
+			position: sticky;
+			top: 50%;
+			left: 25%;
+			background: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
+			opacity: 0.67;
+			filter: blur(155px);
+			will-change: transform;
+			border-radius: 275px;
+		}
+	}
+
+	&__col { padding: .8rem !important; }
+
+	&__card {
+		height: 100%;
+		padding: 3rem;
+		border-radius: 2rem;
+		backdrop-filter: blur( 3px );
+		background: rgba( 16, 17, 19, .7 );
+		box-shadow: rgba( 255, 255, 255, .1 ) 0 1px 3px inset, rgba( 255, 255, 255, 0 ) 0 -1px 3px inset;
+	}
+
+	&__img {
+		max-width: 100%;
+		margin-bottom: 2.4rem;
+		border-radius: 1rem;
+		display: block;
+	}
+
+	&__name {
+		margin-bottom: 1.2rem;
+		font-size: 2.4rem;
+		font-weight: 600;
+		color: #ffffff;
+	}
+
+	&__text { color: #9098a2; }
+}

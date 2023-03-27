@@ -1,25 +1,15 @@
-.top-msg {
-	padding: .8rem 2rem;
-	background-color: rgba( 93, 39, 67, .3 );
-
-	&__link {
-		margin-right: 1.2rem;
-		color: #ffffff;
-
-		&:hover { color: rgb( 255, 102, 139 ); }
-	}
-
-	&__bold { font-weight: bolder; }
-}
-
+/* NAVIGATION STUFF */
 .nav {
-	box-shadow: rgba(255, 255, 255, 0) 0px 1px 1px inset, rgba(0, 0, 0, 0) 0px -1px 3px inset;
 	backdrop-filter: blur( 24px );
+	box-shadow: rgba(255, 255, 255, 0) 0px 1px 1px inset, rgba(0, 0, 0, 0) 0px -1px 3px inset;
 }
 
+/* MAIN MENU */
 .menu {
 	&__item {
 		position: relative;
+
+		&:not( :last-child ) { margin-right: 2.6rem; }
 	}
 
 	&__link {
@@ -31,19 +21,6 @@
 		transition: opacity 200ms ease-in-out 0s;
 
 		&:hover { opacity: 0.7; }
-
-		&--underscore::before {
-			width: 100%;
-			margin-bottom: -.4rem;
-			content: '';
-			position: absolute;
-			height: .2rem;
-			bottom: 0;
-			left: 0;
-			transform: scaleX( 0 );
-			background-color: rgb( 255, 255, 255 );
-			transition: all 0.2s ease-in-out 0s;
-		}
 	}
 
 	&__icon {
@@ -71,6 +48,7 @@
 .menu__item:hover .menu__link--underscore::before { transform: scaleX( 1 ); }
 .dropdown__item:hover .menu__link .menu__icon--shortcut { opacity: 1; }
 
+/* DROPDOWN MENU */
 .dropdown {
 	padding: 2.4rem 2.4rem 1rem;
 	border: 1px solid rgba( 255, 255, 255, .15 );
@@ -89,6 +67,7 @@
 	&__item { margin-bottom: 1.5rem; }
 }
 
+/* TOGGLE STUFF */
 .toggle {
 	width: 4.8rem;
 	height: 4.8rem;
@@ -126,14 +105,15 @@
 }
 
 // Show/hide Lateral menu
-#hidden-menu:checked ~ .menu-2 { transform: translateX( 0 ); }
+#hidden-menu:checked ~ .menu-toggle { transform: translateX( 0 ); }
 #hidden-menu:checked ~ .toggle__background {
 	pointer-events: fill;
 	background-color: rgba( 0, 0, 0, .5 );
 }
 #hidden-menu:checked ~ .toggle__btn { background-image: url( '../svg/hm-close.svg' ); }
 
-.menu-2 {
+/* TOGGLE MENU */
+.menu-toggle {
 	width: 100%;
 	padding-top: 10.0rem;
 	padding-left: 3rem;
@@ -144,17 +124,15 @@
 	background: rgba( 0, 0, 0, .9 );
 	transition: transform 960ms cubic-bezier( .2, 1.17, .3, 1 ) 0s, background 0s ease 0s;
 
-	&__item { padding: .5rem; }
+	&__item {
+		padding: .5rem;
+
+		&:not( :last-child ) { margin-bottom: 1.6rem; }
+	}
 
 	&__link {
 		display: block;
 		font-size: 1.8rem;
 		color: #fafafa;
 	}
-}
-
-@media only screen and ( max-device-width: 991px ) {
-	.top-msg { display: none !important; }
-	.nav { display: none !important; }
-	.toggle { display: block; }
 }
