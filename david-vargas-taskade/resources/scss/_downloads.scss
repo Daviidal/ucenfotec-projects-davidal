@@ -1,0 +1,43 @@
+/* APPS */
+.apps {
+    &__header { margin-bottom: 10.0rem; }
+
+    &__heading {}
+
+    &__text {
+        max-width: 59.0rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__row {
+        max-width: 120.0rem;
+        margin: 0 auto;
+
+        &:not( :last-child ) { margin-bottom: 6.4rem; }
+    }
+
+    &__col {
+        margin: 0;
+        padding: 0; //Remove Bootstrap's default padding on columns
+
+        &:not( :last-child ) { padding-right: 6.4rem; }
+    }
+
+    &__platforms {
+        height: 100%;
+        padding: 6.4rem 9rem;
+    }
+}
+
+/*************************************************************************************************************************************************************************/
+
+@media only screen and ( max-device-width: 991px ) {
+	.apps {
+        &__col {
+            padding-right: 0 !important;
+
+            &:not( :last-child ) { padding-bottom: 6.4rem; }
+        }
+    }
+}

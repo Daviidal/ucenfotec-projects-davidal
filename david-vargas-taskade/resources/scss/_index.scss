@@ -148,18 +148,14 @@
 
 /* DEVICES */
 .devices {
-	max-width: 120.0rem;
 	height: 30.9rem; // Taskade's default height
-	margin: 0 auto;
 	position: relative;
 
 	&__background {
 		width: 100%;
 		height: 100%;
-		border-radius: 2.4rem;
 		position: absolute;
 		z-index: -1;
-		background-color: rgba( 23, 25, 28, .6 );
 	}
 
 	&__img {
@@ -174,97 +170,6 @@
 			top: 80.3%;
 			left: -5%;
 		}
-	}
-
-	&__heading {
-		font-family: var( --font-monospace );
-		font-size: 1.8rem;
-		font-weight: 900;
-		text-transform: uppercase;
-		letter-spacing: .13em;
-		color: var( --color-white );
-	}
-
-	&__menu {}
-
-	&__item {
-		max-width: 6.4rem;
-		padding: 0 !important; // Remove Bootstrap's default padding
-
-		&:not( :last-child ) { margin-right: 2.5rem; }
-	}
-
-	&__link {
-		display: block;
-
-		&--heading { margin-bottom: 3.5rem; }
-	}
-
-	&__box {
-		width: 6.4rem;
-		height: 6.4rem;
-		margin-bottom: 1.2rem;
-		border-radius: 2rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		backdrop-filter: blur( 24px );
-		box-shadow: inset 0 0 2px hsla( 0,0%,100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
-		background-image: radial-gradient( circle at bottom,rgba( 91, 149, 191, .4 ) 0,hsla( 0, 0%, 9%, .8 ) 30%,rgba( 30, 30, 30, .8 ) 100% );
-
-		&:hover::after { opacity: 1; }
-
-		&::after {
-			border-radius: 2rem;
-			content: "";
-			position: absolute;
-			z-index: -1;
-			inset: 0;
-			backdrop-filter: blur( 24px );
-			opacity: 0;
-			background-image: radial-gradient( circle at bottom,rgba( 210, 18, 11, .5 ) 0,hsla( 0, 0%, 9%, .8 ) 30%,rgba( 40, 40, 40,.8 ) 100% );
-			box-shadow: inset 0 0 2px hsla( 0, 0%, 100%,.2 ),inset 0 -1px 3px rgba( 0, 0, 0, .8 );
-			transition: opacity .1s linear;
-		}
-	}
-
-	&__box:hover &__icon {
-		background-image: url( '../svg/android-2.svg' );
-
-		&--android { background-image: url( '../svg/android-2.svg' ); }
-		&--ios { background-image: url( '../svg/ios-2.svg' ); }
-		&--mac { background-image: url( '../svg/mac.svg' ); }
-		&--windows { background-image: url( '../svg/windows-2.svg' ); }
-		&--linux { background-image: url( '../svg/linux-2.svg' ); }
-		&--chrome { background-image: url( '../svg/chrome-2.svg' ); }
-		&--firefox { background-image: url( '../svg/firefox-2.svg' ); }
-		&--edge { background-image: url( '../svg/edge-2.svg' ); }
-	}
-
-	&__icon {
-		width: 3rem;
-		height: 3rem;
-		background-image: url( '../svg/android-1.svg' );
-		background-repeat: no-repeat;
-		background-position: center;
-
-		&--android { background-image: url( '../svg/android-1.svg' ); }
-		&--ios { background-image: url( '../svg/ios-1.svg' ); }
-		&--mac { background-image: url( '../svg/mac.svg' ); }
-		&--windows { background-image: url( '../svg/windows-1.svg' ); }
-		&--linux { background-image: url( '../svg/linux-1.svg' ); }
-		&--chrome { background-image: url( '../svg/chrome-1.svg' ); }
-		&--firefox { background-image: url( '../svg/firefox-1.svg' ); }
-		&--edge { background-image: url( '../svg/edge-1.svg' ); }
-	}
-
-	&__text {
-		display: block;
-		font-size: 1.4rem;
-		text-align: center;
-		line-height: 1.6rem;
-		color: var( --color-gray );
 	}
 }
 
@@ -527,75 +432,6 @@
 	}
 }
 
-/* SUSCRIBE */
-.suscribe {
-	border-top: 1px solid rgb( 44, 48, 53 );
-	border-bottom: 1px solid rgb( 44, 48, 53 );
-
-	&__wrapper {
-		max-width: 140.0rem;
-		margin: 0 auto;
-		padding: 21.0rem 7.5%;
-		text-align: center;
-	}
-
-	&__heading {
-		margin-bottom: 2.4rem;
-		font-size: 4.2rem;
-		font-weight: 700;
-		color: #ffffff;
-	}
-
-	&__gradient {
-		-webkit-text-fill-color: transparent;
-		background-image: linear-gradient( 90deg, #f64942, #ef90a4, #5b95bf );
-		background-repeat: repeat;
-		background-color: red;
-		background-size: 100%;
-		-webkit-background-clip: text;
-	}
-
-	&__text {
-		margin-bottom: 5rem;
-		font-size: 2rem;
-		line-height: 1.5;
-		color: rgb( 197, 197, 197 );
-	}
-
-	&__bar {
-		min-width: 37.2rem;
-		padding: 1rem 1.2rem 1rem 2.4rem;
-		border-radius: 4.8rem;
-		background-color: #17191c;
-		color: #fafafa;
-	}
-
-	&__icon {
-		width: 2rem;
-		display: block;
-	}
-
-	&__input {
-		width: 18.0rem;
-		padding-left: 1.2rem;
-		border: 0;
-		outline: 0;
-		background-color: transparent;
-		box-shadow: 0 6px 10px 0 rgba( 0, 0, 0, .1 );
-		color: #ffffff;
-
-		&::placeholder {
-			font-size: 1.6rem;
-			color: gray;
-		}
-	}
-
-	&__btn {
-		padding: .96rem 2rem;
-		border-radius: 2.5rem;
-	}
-}
-
 /*************************************************************************************************************************************************************************/
 
 @media only screen and ( max-device-width: 1099px ) {
@@ -604,8 +440,6 @@
 		height: 60.0rem; // Taskade's default height for responsive
 
 		&__menu { max-width: 40.0rem; }
-
-		&__item { margin: 1.6rem 2rem !important; }
 	}
 }
 @media only screen and ( max-device-width: 991px ) {

@@ -27,7 +27,7 @@
 					<!-- Main Menu -->
 					<ul class = "menu d-flex">
 						<li class = "menu__item">
-							<a class = "menu__link" href = "#">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<a class = "menu__link" href = "javascript:void( 0 )">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
 							<ul class = "dropdown dropdown--s1">
 								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Download Apps<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
 								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Instant Demo<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
@@ -134,85 +134,87 @@
 			</section>
 			<!-- Devices -->
 			<section class = "section">	
-				<div class = "devices d-flex flex-column justify-content-center align-items-center">
+				<div class = "platforms devices d-flex flex-column justify-content-center align-items-center">
 					<div class = "devices__background d-none d-md-block">
 						<img class = "devices__img devices__img--1" src = "resources/img/misc/download-dots.png" alt = "Download Dots"/>
 						<img class = "devices__img devices__img--2" src = "resources/img//misc/semi-circles.png" alt = "Semi Circles"/>
 					</div>
-					<a class = "devices__link devices__link--heading" href = "javascript:void( 0 )">
-						<h2 class = "devices__heading">Get Taskade On Any Device</h2>
+					<a class = "platforms__link platforms__link--heading" href = "javascript:void( 0 )">
+						<h3 class = "platforms__heading platforms__heading--3">Get Taskade On Any Device</h3>
 					</a>
-					<ul class = "devices__menu row justify-content-center">
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--android"></div>
+					<ul class = "platforms__menu devices__menu row justify-content-center">
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--android"></div>
 								</div>
-								<span class = "devices__text">Android</span>
+								<span class = "platforms__name">Android</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--ios"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--ios"></div>
 								</div>
-								<span class = "devices__text">iOS</span>
+								<span class = "platforms__name">iOS</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--mac"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--mac"></div>
 								</div>
-								<span class = "devices__text">Mac</span>
+								<span class = "platforms__name">Mac</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--windows"></div>
+						<li class = "d-block d-lg-none w-100"></li> <!-- Breakpoint -->
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--windows"></div>
 								</div>
-								<span class = "devices__text">Windows</span>
+								<span class = "platforms__name">Windows</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--linux"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--linux"></div>
 								</div>
-								<span class = "devices__text">Linux (x86)</span>
+								<span class = "platforms__name">Linux (x86)</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--linux"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--linux"></div>
 								</div>
-								<span class = "devices__text">Linux (ARM)</span>
+								<span class = "platforms__name">Linux (ARM)</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--chrome"></div>
+						<li class = "d-block d-lg-none w-100"></li> <!-- Breakpoint -->
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--chrome"></div>
 								</div>
-								<span class = "devices__text">Chrome</span>
+								<span class = "platforms__name">Chrome</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--firefox"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--firefox"></div>
 								</div>
-								<span class = "devices__text">Firefox</span>
+								<span class = "platforms__name">Firefox</span>
 							</a>
 						</li>
-						<li class = "devices__item col">
-							<a class = "devices__link" href = "javascript:void( 0 )">
-								<div class = "devices__box">
-									<div class = "devices__icon devices__icon--edge"></div>
+						<li class = "platforms__item col">
+							<a class = "platforms__link" href = "javascript:void( 0 )">
+								<div class = "platforms__box">
+									<div class = "platforms__icon platforms__icon--edge"></div>
 								</div>
-								<span class = "devices__text">Edge</span>
+								<span class = "platforms__name">Edge</span>
 							</a>
 						</li>
 					</ul>
@@ -449,8 +451,8 @@
 						<div class = "cards__col col-12 col-md-6 col-lg">
 							<div class = "cards__card">
 								<img class = "cards__img" src = "resources/img/cards/landing/workflow-9.png" alt = "Card Backdrop"/>
-								<h3 class = "cards__name">Sync across devices</h3>
-								<p class = "cards__text">Take Taskade with you anywhere with real-time sync across all your devices and team members. Available on iOS, Android, Mac, PC and more.</p>
+								<h3 class = "cards__name">Sync across platforms</h3>
+								<p class = "cards__text">Take Taskade with you anywhere with real-time sync across all your platforms and team members. Available on iOS, Android, Mac, PC and more.</p>
 							</div>
 						</div>
 					</div>

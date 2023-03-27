@@ -21,8 +21,8 @@
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--gradient-1: linear-gradient( to right top, #6c22bd, #8b25bb, #a52bb9, #bc34b7, #d040b5, #e645a5, #f55195, #ff6188, #ff796e, #ff965b, #f5b255, #e1cd60 );
+	--gradient-2: linear-gradient( 90deg, #f64942, #ef90a4, #5b95bf );
 	--gradient-radial-1: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
-	--color-gradient: linear-gradient( 90deg, var( --color-secondary-red ), var( --color-secondary-pink ), var( --color-secondary-blue ) );
 	--font-sans-serif: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 	--font-monospace: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
 	--box-shadow: inset 0px 0px 2px hsla( 0, 0%, 100%, .2 ), inset 0px -1px 3px rgba( 0, 0, 0, .8 );
