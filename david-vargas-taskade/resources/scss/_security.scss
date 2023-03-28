@@ -31,27 +31,6 @@
 		&--1 { margin-bottom: 4rem; }
 	}
 
-	&__text {
-		margin-bottom: 2.4rem;
-		font-weight: 500;
-		letter-spacing: 0.02rem;
-		color: var( --color-white );
-	}
-
-	&__highlight {
-		color: var( --color-secondary-red );
-
-		&:hover { color: var( --color-secondary-pink ); }
-	}
-
-	&__list { padding-left: 2.6rem; }
-
-	&__item {
-		line-height: 172%;
-
-		&:not( :last-child ) { margin-bottom: 1rem; }
-	}
-
 	&__btn {
 		padding: 1rem 2rem;
 		border-radius: 1rem;
