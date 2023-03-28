@@ -1,31 +1,11 @@
-/* TOP MESSAGE */
-.top-msg {
-	padding: .8rem 2rem;
-	background-color: rgba( 93, 39, 67, .3 );
-
-	&__link {
-		margin-right: 1.2rem;
-		color: var( --color-white );
-
-		&:hover { color: var( --color-primary-60 ); }
-	}
-
-	&__bold { font-weight: bolder; }
-}
-
-/* MAIN */
-.main {
-	padding-top: 4rem;
+/* FEATURES */
+.features {
+	margin-bottom: 4rem;
 
 	&__heading {
 		max-width: 110.0rem;
 		margin: 4rem auto;
 		position: relative;
-		font-size: 11rem;
-		font-weight: 600;
-		line-height: 10rem;
-		letter-spacing: -.1rem;
-		text-align: center;
 
 		&:hover::after {
 			filter: blur( 140px );
@@ -49,11 +29,6 @@
 			transition: filter .25s ease-in-out, opacity .25s ease-in-out;
 		}
 	}
-}
-
-/* FEATURES */
-.features {
-	margin-bottom: 4rem;
 
 	&__buttons { margin-bottom: 4rem; }
 

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8"/>
+		<meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+		<!-- <link rel = "stylesheet" href = "resources/css/bootstrap.min.css"/> -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<link rel = "stylesheet" href = "resources/css/main.css"/>
+		<title>Mind Mapping | My Taskade</title>
+	</head>
+	<body class = "body">
+		<!-- Top Message -->
+		<div class = "top-msg d-none d-lg-flex justify-content-center">
+			<a class = "top-msg__link" href = "javascript:void( 0 )">🤖 <span class = "top-msg__bold">Introducing Taskade AI</span> – now on all platforms! Try for free and experience the future of productivity. </a>
+		</div>
+		<!-- Header -->
+		<header class = "header">
+			<div class = "header__wrapper d-flex align-items-center">
+				<!-- Logo -->
+				<a class = "header__logo" href = "index.html">
+					<img class = "header__icon" src = "resources/svg/logo-icon.svg" alt = "Logo's Icon"/>
+					<img class = "header__text" src = "resources/svg/logo-text.svg" alt = "Logo's Letters"/>
+				</a>
+				<!-- Navigation -->
+				<nav class = "nav d-none d-lg-block">
+					<!-- Main Menu -->
+					<ul class = "menu d-flex">
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Product<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Download Apps<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Instant Demo<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Features<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Updates<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Security<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Solutions<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s2">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Taskade AI<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Project Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Task Management<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Mind Mapping<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Remote Work<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Non-Profit<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Education<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Startup<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item">
+							<a class = "menu__link" href = "javascript:void( 0 )">Learn<img class = "menu__icon menu__icon--caret" src = "resources/svg/dropdown-caret.svg" alt = "Menu Arrow"/></a>
+							<ul class = "dropdown dropdown--s1">
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Blog<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Support Articles<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Community<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Get Help<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Reviews<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">Videos<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+								<li class = "dropdown__item"><a class = "menu__link" href = "javascript:void( 0 )">FAQ<img class = "menu__icon menu__icon--shortcut" src = "resources/svg/shortcut.svg" alt = "Menu Arrow"/></a></li>
+							</ul>
+						</li>
+						<li class = "menu__item"><a class = "header__link" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu__item me-auto"><a class = "header__link" href = "javascript:void( 0 )">Pricing</a></li>
+					</ul>
+				</nav>
+				<!-- Buttons -->
+				<div class = "header__buttons ms-auto d-flex gap-4 align-items-center">
+					<a class = "header__link d-none d-xl-block" href = "javascript:void( 0 )">Contact Sales</a>
+					<a class = "header__link d-none d-xl-block" href = "javascript:void( 0 )">Log In</a>
+					<a class = "header__btn-signup header__btn-signup--1 d-none d-lg-block my-btn" href = "javascript:void( 0 )">Sign up for free</a>
+					<a class = "header__btn-signup header__btn-signup--2 d-block d-lg-none my-btn" href = "javascript:void( 0 )">Sign up</a>
+				</div>
+				<!-- Toggle -->
+				<label class = "toggle d-block d-lg-none" for = "hidden-menu">
+					<input id = "hidden-menu" class = "toggle__input" type = "checkbox"/>
+					<span class = "toggle__btn"></span>
+					<div class = "toggle__background"></div>
+					<!-- Toggle Menu -->
+					<ul class = "menu-toggle d-flex flex-column">
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Sign up for free</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Log in</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Home</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Downloads</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Blog</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">About</a></li>
+						<li class = "menu-toggle__item"><a class = "menu-toggle__link" href = "javascript:void( 0 )">Contact</a></li>
+					</ul>
+				</label>
+			</div>
+		</header>
+		<!-- Main -->
+		<main class = "main">
+			<!-- Search -->
+			<div class = "search d-flex">
+				<a class = "search__link" href = "javascript:void( 0 )"><img class = "search__icon search__icon--house" src = "resources/svg/icons/house.svg" alt = "Categories"/></a>
+				<div class = "search__bar">
+					<img class = "search__icon search__icon--search" src = "resources/svg/icons/search.svg" alt = "Search"/>
+					<input class = "search__input" type = "text" placeholder = "Search Templates"/>
+				</div>
+				<button class = "search__btn">
+					<img class = "search__icon search__icon--categories" src = "resources/svg/icons/categories-1.svg" alt = "Search"/>
+					<span class = "search__text d-none d-lg-block">Categories</span>
+					<img class = "search__icon search__icon--expand" src = "resources/svg/icons/expand-1.svg" alt = "Search"/>
+				</button>
+			</div>
+			<!-- Templates -->
+			<section class = "section">
+				<div class = "cards-2">
+					<div class = "cards-2__header">
+						<h1 class = "crads-2__heading heading heading--2">🧠 AI Mind Map Templates</h1>
+						<p class = "cards-2__text">Use our free mind map templates to plan, organize, and brainstorm for your next project. You will find templates for product and business launch brainstorming, stand-up meetings, issue tree maps, and more. Use one of our templates to build your own ultimate mind map.</p>
+					</div>
+					<div class = "cards-2__list row">
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-1.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Product Release Strategy Meeting Agenda</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-2.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Brainstorm New Ideas</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-3.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Minimalist Mind Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-4.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Daily Stand-Up Meeting Mindmap</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-5.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Issue Tree Map</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-6.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Business Direction Startup Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-7.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Product Branding & Brainstorming</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-8.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Startup Business Strategy Mapping</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-9.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Team Hierarchy Hub Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-10.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">First Principles Mindmap</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-11.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Challenge Mapping Template</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-12.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Project Development Decision Tree Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-13.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Sprint Backlog Meeting</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-14.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Budget Mind Map</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-15.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Mergers and Acquisitions (M&A) Decision Tree Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-16.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Holistic Marketing Mapping for Teams</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-17.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Workshop Brainstorming</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-18.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Risk Management Assessment Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-19.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Financial Risk Analysis Decision Tree Mapping</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-20.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Fault Tree Flow Mapping</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-21.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Product Development Decision Tree Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-22.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Business Area Layout Mapping</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-23.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Interview Candidates Mapping</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-24.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Industrial Training Solutions Mapping</a>
+							</div>
+						</div>
+						<div class = "w-100 d-none d-lg-block"></div> <!-- Breakpoint -->
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-25.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">Ideation Mindmap</a>
+							</div>
+						</div>
+						<div class = "cards-2__col col-12 col-md-6 col-lg-4">
+							<div class = "cards-2__card">
+								<div class = "cards-2__figure">
+									<img class = "cards-2__img" src = "resources/img/cards/mindmap/template-26.jpg" alt = "Card Backdrop"/>
+									<div class = "cards-2__overlay">
+										<a class = "my-btn cards-2__btn" href = "javascript:void( 0 )">Use Template</a>
+										<a class = "my-btn my-btn--empty cards-2__btn" href = "javascript:void( 0 )">Preview</a>
+									</div>
+								</div>
+								<a class = "cards-2__link" href = "javascript:void( 0 )">New Employee Information Mapping</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Categories -->
+			<section class = "section">
+				<div class = "cards-color">
+					<h3 class = "cards-color__heading heading heading--3"><span class = "heading__gradient">All</span> Template Categories</h3>
+					<div class = "cards-color__list row">
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--blue-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Featured</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Automate your workflows with featured templates for free. Taskade is an all-in-one collaboration platform for remote teams with 500+ AI-powered templates.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-1"></div>
+								<h5 class = "cards-color__name heading heading--5">ChatGPT</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use our free AI templates to write faster and smarter with high-quality generative content for your blog and more.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--yellow-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Personal</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates to help you track all your personal task lists, goals, habits, and hobbies. Find templates for bullet journaling, personal task tracking, home hunting, and party planning.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--orange-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Project Management</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Here you will find project management templates to help you and your team complete tasks, collaborate on work, delegate assignments, and communicate effectively on what needs to get done. Everything you need for your scrums, sprints, and agile project solutions as well as simple team task lists to keep your team on track.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--purple-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Task Management</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Looking for free Task Management templates? Automate your workflows and get the upper hand with our free task management templates!</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--purple-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Engineering</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Engineering and Programming templates for everything an engineer might need including onboarding, tech stacks, QA testing, managing sprints, and more.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Education</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Free templates for students and school administrators. Track all your school assignments, exams, org charts, and other activities with our education templates!</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--gray-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Design</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates for design team sprints, U/I designs and redesigns, web design and development, and for building SOPs for your design team. You will also find customizable templates you can use to build mobile UI's, product designs, for managing your remote design team.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--green-1"></div>
+								<h5 class = "cards-color__name heading heading--5">Marketing</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use our ready-made free marketing templates and get a headstart! Organize campaigns and plan your marketing strategy with our templates today.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Mind Map</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use our free mind map templates to plan, organize, and brainstorm for your next project. You will find templates for product and business launch brainstorming, stand-up meetings, issue tree maps, and more. Use one of our templates to build your own ultimate mind map.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--yellow-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Organizational</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use one of these templates to build your organizational chart. You will find templates for hospitals, tech startups, human resources, educational institutions, and more. Track your team and organization as it grows.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--yellow-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Planning</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Prepare for your next event, project, or retrospective meeting with our planning templates. You will find a template for everything from wedding plans, to birthday parties, to your next business trip.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--orange-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Meetings</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use our templates to create and plan effective meetings that people want to attend. Whether it is your daily stand-up meeting or a quarterly meeting with your marketing team, our templates will make it easy for you to build agendas, assign meeting tasks, and track action items.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-4"></div>
+								<h5 class = "cards-color__name heading heading--5">Team Management</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use one of our team management templates to build and guide your team to success. You will find templates for recruiting, onboarding new employees, employee reviews, goal setting meetings, and more.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-5"></div>
+								<h5 class = "cards-color__name heading heading--5">Strategy</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Business strategy templates for client proposals, KPI trackers, project kickoffs, SWOT analysis, and more to keep your business on track towards your goals.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--green-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Gaming</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Here you will find templates built for game designers and developers to help game design teams collaborate, assign tasks, and communicate effectively.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--blue-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Production</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates for your video production needs. Create a pre-production checklist and make sure you hit every task with our video production template.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-6"></div>
+								<h5 class = "cards-color__name heading heading--5">Product Management</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Ready to launch the next great product in your market or have you already launched and need to track customer feedback and create a roadmap for future development? Our product management templates give you a great place to get started. You will find templates for roamaps, A/B testing, issue trackers, change requests, and product change logs.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--purple-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Startup</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Startups have a lot to keep track of and it can sometimes feel overwhelming. This is why we’ve created some of the best free templates to help your startup stay on track!</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--gray-2"></div>
+								<h5 class = "cards-color__name heading heading--5">Remote Work</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Here you will find templates to help you be more productive working from home or for managing a team of remote workers. There are templates for creating your remote work policies and procedures, building a tech stack, conducting remote meetings with your team, and managing a remote project.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--orange-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Y Combinator</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates for preparing for your Y Combinator interview, weekly planners, and guides from other founders</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--green-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Roadmap</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates for product roadmaps, sprints, project overviews, launches and more. Manage where you are going with your product with one of our easy to use templates.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--green-4"></div>
+								<h5 class = "cards-color__name heading heading--5">Maintenance</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Templates for property management, household maintenance, or creating a store cleanup list.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--orange-4"></div>
+								<h5 class = "cards-color__name heading heading--5">How-Tos</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Utilize one of these templates to create your own list of tips for boosting productivity, managing remote teams, brainstorming a mindmap, or taking better meeting notes.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--blue-3"></div>
+								<h5 class = "cards-color__name heading heading--5">Research</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">Use these customizable templates for planning out case studies, gathering and analyzing product feedback, measuring UX metrics, or conducting your next A/B test.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--blue-4"></div>
+								<h5 class = "cards-color__name heading heading--5">Music</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">You will find templates you can customize for your music production. You will find templates for everything from producing your next new song to a mixing workflow checklist.</p></div>
+							</a>
+						</div>
+						<div class = "cards-color__col col-12 col-md-6 col-lg-4">
+							<a class = "cards-color__card" href = "javascript:void( 0 )">
+								<div class = "cards-color__line cards-color__line--pink-7"></div>
+								<h5 class = "cards-color__name heading heading--5">Trip Planning</h5>
+								<div class = "cards-color__wrapper"><p class = "cards-color__text">These templates will help you to plan your ultimate trip itinerary, for everything from your next family vacation to an exotic getaway. You can also create your very own travel bucket list and check off the destinations as you hit them.</p></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class = "footer">
+			<div class = "footer__row footer__row--top">
+				<div class = "footer__wrapper footer__wrapper--1 row">
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Taskade</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">About</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Pricing</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Press</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Jobs</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">FAQ</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Reviews</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Compare</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Help Center</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Community Forum</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Affiliate Partners</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Server Status</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Integrations</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Contact</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Downloads</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Android</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">iOS</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mac</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mac App Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Windows</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Microsoft Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Linux (x86)</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Linux (ARM)</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Snap Store</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Chrome</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Firefox</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Edge</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Designed For</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Remote Work</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Task Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI Writing</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Education</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Outlining</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Startups</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Designers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Agencies</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Marketers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Mind Mapping</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Video Chat</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Nonprofits</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Developers</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Writers</a></li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Templates</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Featured</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">ChatGPT</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Personal</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Project Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Task Management</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Engineering</a></li>
+						<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">Education</a></li>
+						<li class = "footer__item"><span class = "footer__btn">See all ▼</span></li>
+						<li class = "footer__item">
+							<ul class = "footer__menu">
+								<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Generate</a></li>
+								<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI</a></li>
+								<li class = "footer__item"><a class = "footer__link" href = "javascript:void( 0 )">AI Content</a></li>
+								<li class = "footer__item"><span class = "footer__btn">See all ▼</span></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class = "footer__menu mb-5 mb-lg-0 col-6 col-lg">
+						<li class = "footer__item"><a class = "footer__link footer__link--heading" href = "javascript:void( 0 )">Blog</a></li>
+						<li class = "footer__item"><a href = "javascript:void( 0 )"><img class = "footer__img" src = "resources/img/blog.jpg" alt = "Blog's Image"/></a></li>
+						<li class = "footer__item"><a class = "footer__mobile" href = "javascript:void( 0 )">🤖 Taskade AI — Now Available on iOS & Android. Supercharge your workflow on Mobile & Tablet.</a></li>
+						<li class = "footer__item"><span class = "footer__btn">More Posts ▼</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class = "footer__row footer__row--bottom">
+				<div class = "footer__wrapper footer__wrapper--2 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-center">
+					<div class = "footer__col">
+						<span class = "footer__message">Made with ❤️ in Cost Rica</span>
+						<div class = "footer__row">
+							<a class = "footer__legal" href = "javascript:void( 0 )">© 2023 Taskade.</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Privacy</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Terms</a>
+							<a class = "footer__legal" href = "javascript:void( 0 )">Security</a>
+						</div>
+					</div>
+					<div class = "footer__col d-flex">
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/reddit.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/youtube.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/github.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/instagram.svg" alt = ""></a>
+						<a class = "footer__social" href = "javascript:void( 0 )"><img class = "footer__icon" src = "resources/svg/twitter.svg" alt = ""></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="resources/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

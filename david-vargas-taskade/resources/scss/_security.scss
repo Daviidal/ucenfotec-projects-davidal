@@ -1,0 +1,60 @@
+/* SECURITY */
+.security {
+	max-width: 96.0rem;
+	margin: 0 auto;
+	padding: 4rem 0 8rem 0;
+
+	&__menu {
+		padding-right: 4rem;
+		position: sticky !important;
+		top: 100px !important;
+	}
+
+	&__option { &:not( :last-child ) { margin-bottom: .2rem; } }
+
+	&__link {
+		padding: 1rem 2rem;
+		border-radius: 1rem;
+		display: block;
+		color: var( --color-white );
+
+		&:hover { background-color: rgb( 16, 17, 19 ); }
+	}
+
+	&__col { padding: 0; } // Remove Bootstrap's default padding
+
+	&__info { padding: 0 2rem; }
+
+	&__heading {
+		text-align: left;
+
+		&--1 { margin-bottom: 4rem; }
+	}
+
+	&__text {
+		margin-bottom: 2.4rem;
+		font-weight: 500;
+		letter-spacing: 0.02rem;
+		color: var( --color-white );
+	}
+
+	&__highlight {
+		color: var( --color-secondary-red );
+
+		&:hover { color: var( --color-secondary-pink ); }
+	}
+
+	&__list { padding-left: 2.6rem; }
+
+	&__item {
+		line-height: 172%;
+
+		&:not( :last-child ) { margin-bottom: 1rem; }
+	}
+
+	&__btn {
+		padding: 1rem 2rem;
+		border-radius: 1rem;
+		display: inline-block;
+	}
+}
