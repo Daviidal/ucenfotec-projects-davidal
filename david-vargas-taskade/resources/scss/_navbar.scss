@@ -86,7 +86,7 @@
 		position: absolute;
 		z-index: 3;
 		cursor: pointer;
-		background-image: url( '../svg/hm-open.svg' );
+		background-image: url( '../svg/icons/hm-open.svg' );
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -110,7 +110,7 @@
 	pointer-events: fill;
 	background-color: rgba( 0, 0, 0, .5 );
 }
-#hidden-menu:checked ~ .toggle__btn { background-image: url( '../svg/hm-close.svg' ); }
+#hidden-menu:checked ~ .toggle__btn { background-image: url( '../svg/icons/hm-close.svg' ); }
 
 /* TOGGLE MENU */
 .menu-toggle {

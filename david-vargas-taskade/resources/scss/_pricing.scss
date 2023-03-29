@@ -2,16 +2,22 @@
 /* PRICING */
 .pricing {
 	max-width: 140.0rem;
-	margin: 0 auto;
+	margin: 0 auto 10rem auto;
 
-	&__wrapper {
-		max-width: 113.2rem;
-		margin: 0 auto;
+	&__row {
+		&:not( :last-child ) { margin-bottom: 10rem; }
+
+		&--wrapper {
+			max-width: 113.2rem;
+			margin: 0 auto;
+		}
 	}
 
-	&__row {}
+	&__col {
+		padding: 0 1.6rem;
 
-	&__col { padding: 0 1.6rem; }
+		&--inner { padding: 0; } // Remove Bootstrap's default padding on columns
+	}
 
 	&__level {
 		height: 100%;
@@ -54,19 +60,19 @@
 		font-size: 1.4rem;
 
 		&:not( :last-child ) { margin-bottom: 1.4rem; }
-	}
 
-	&__icon {
-		width: 2rem;
-		height: 2rem;
-		margin-right: .8rem;
-		content: '';
-		display: inline-block;
-		vertical-align: middle;
-		background-size: 2rem;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url( '../img/icons/included.png' );
+		&::before {
+			width: 2rem;
+			height: 2rem;
+			margin-right: .8rem;
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			background-size: 2rem;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url( '../img/icons/included.png' );
+		}
 	}
 
 	&__btn {
@@ -75,4 +81,11 @@
 		padding: .96rem 2.4rem;
 	}
 
+	&__icon { margin-right: 2.8rem; }
+
+}
+
+/*************************************************************************************************************************************************************************/
+@media only screen and ( max-device-width: 991px ) {
+	.pricing { &__col { &:not( :last-child ) { margin-bottom: 4rem; } } }
 }

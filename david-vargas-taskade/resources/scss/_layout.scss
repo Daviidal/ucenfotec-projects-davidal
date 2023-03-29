@@ -109,7 +109,7 @@
 
 	&__menu { padding: 0 !important; } // Delete Bootstrap's default padding on columns
 
-	&__item { &:not( :last-child ) { margin-bottom: 1.6rem; } }
+	&__item { &:not( :last-child ) { margin-bottom: 1.2rem; } }
 
 	&__item:hover > &__link { opacity: .7; }
 

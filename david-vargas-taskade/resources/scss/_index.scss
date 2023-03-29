@@ -6,6 +6,7 @@
 		max-width: 110.0rem;
 		margin: 4rem auto;
 		position: relative;
+		text-align: center;
 
 		&:hover::after {
 			filter: blur( 140px );
@@ -192,7 +193,11 @@
 
 	&__list {}
 
-	&__item { &:not( :last-child ) { margin-bottom: 24.0rem; }  }
+	&__item {
+		margin: 0; // Remove Bootstrap's default margin on rows
+
+		&:not( :last-child ) { margin-bottom: 24.0rem; }
+	}
 
 	&__item:hover &__figure::after {
 		filter: blur( 140px );
@@ -342,8 +347,8 @@
 		&:not( :last-child ) { margin-right: .5rem; }
 	}
 
-	&__btn:hover &__icon { content: url( '../img/icons/dot-active.svg' ); }
-	&__btn--active &__icon { content: url( '../img/icons/dot-active.svg' ); }
+	&__btn:hover &__icon { content: url( '../svg/icons/dot-active.svg' ); }
+	&__btn--active &__icon { content: url( '../svg/icons/dot-active.svg' ); }
 
 	&__icon {
 		display: block;
