@@ -12,7 +12,7 @@ body {
 	font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
-	color: #ffffff;
+	color: var( --color-white );
 }
 
 h1, h2 {
@@ -28,7 +28,10 @@ ul {
 	list-style-type: none;
 }
 
-a { text-decoration: none; }
+a {
+	text-decoration: none;
+	color: var( --color-white );
+}
 
 button,
 textarea {

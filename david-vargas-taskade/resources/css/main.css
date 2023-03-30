@@ -56,7 +56,7 @@ body {
   font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 h1, h2 {
@@ -76,6 +76,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--color-white);
 }
 
 button,
@@ -393,34 +394,40 @@ textarea {
 }
 
 /* CARDS #2 */
-.cards-2 {
+.cards-temp {
   max-width: 140rem;
   padding: 0 3rem;
   margin: 0 auto;
 }
-.cards-2__header {
+.cards-temp__header {
   margin-bottom: 5.6rem;
 }
-.cards-2__heading {
+.cards-temp__heading {
   text-align: center;
 }
-.cards-2__text {
+.cards-temp__title {
+  margin-bottom: 4rem;
+}
+.cards-temp__text {
   font-size: 2rem;
   line-height: 150%;
   text-align: center;
   color: var(--color-gray);
 }
-.cards-2__col {
+.cards-temp__list {
+  margin-bottom: 12rem;
+}
+.cards-temp__col {
   padding: 1.6rem;
 }
-.cards-2__figure {
+.cards-temp__figure {
   margin-bottom: 2.4rem;
   border-radius: 1.6rem;
   overflow: hidden;
   position: relative;
   height: 26.2rem;
 }
-.cards-2__img {
+.cards-temp__img {
   width: 100%;
   height: 100%;
   display: block;
@@ -429,10 +436,10 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cards-2__figure:hover .cards-2__overlay {
+.cards-temp__figure:hover .cards-temp__overlay {
   opacity: 1;
 }
-.cards-2__overlay {
+.cards-temp__overlay {
   width: 100%;
   height: 100%;
   display: flex;
@@ -444,13 +451,15 @@ textarea {
   background-color: rgba(0, 0, 0, 0.7);
   transition: opacity 200ms ease-in-out 0s;
 }
-.cards-2__btn {
+.cards-temp__btn {
+  padding: 1.4rem 3.2rem;
+  border-radius: 0.8rem;
+}
+.cards-temp__btn--2 {
   width: 100%;
   max-width: 18rem;
-  border-radius: 0.8rem;
-  padding: 1.4rem 3.2rem;
 }
-.cards-2__link {
+.cards-temp__link {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--color-white);
