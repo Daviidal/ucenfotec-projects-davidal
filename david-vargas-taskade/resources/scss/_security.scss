@@ -1,3 +1,7 @@
+/*****************************************************
+* Components for 'Security' page
+*****************************************************/
+
 /* SECURITY */
 .security {
 	max-width: 96.0rem;
@@ -7,7 +11,7 @@
 	&__menu {
 		padding-right: 4rem;
 		position: sticky !important;
-		top: 100px !important;
+		top: 10rem !important;
 	}
 
 	&__option { &:not( :last-child ) { margin-bottom: .2rem; } }

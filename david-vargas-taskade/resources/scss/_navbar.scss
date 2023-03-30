@@ -1,7 +1,11 @@
+/*****************************************************
+* Components for the Navigation Menu
+*****************************************************/
+
 /* NAVIGATION STUFF */
 .nav {
 	backdrop-filter: blur( 24px );
-	box-shadow: rgba(255, 255, 255, 0) 0px 1px 1px inset, rgba(0, 0, 0, 0) 0px -1px 3px inset;
+	box-shadow: var( --color-black ) 0px 1px 1px inset, var( --color-black ) 0px -1px 3px inset;
 }
 
 /* MAIN MENU */
@@ -17,10 +21,10 @@
 		align-items: center;
 		font-size: 1.6rem;
 		white-space: nowrap;
-		color: #ffffff;
+		color: var( --color-white );
 		transition: opacity 200ms ease-in-out 0s;
 
-		&:hover { opacity: 0.7; }
+		&:hover { opacity: .7; }
 	}
 
 	&__icon {
@@ -58,7 +62,7 @@
 	left: 50%;
 	top: 100%;
 	transform: translateX( -50% );
-	background-color: #000000;
+	background-color: var( --color-black );
 
 	// Each Taskade's dropdown menu has its own fixed width
 	&--s1 { width: 20.0rem; }
@@ -75,9 +79,9 @@
 	position: relative;
 
 	&__input {
+		position: absolute;
 		z-index: 4;
 		visibility: hidden;
-		position: absolute;
 	}
 
 	&__btn {
@@ -133,6 +137,6 @@
 	&__link {
 		display: block;
 		font-size: 1.8rem;
-		color: #fafafa;
+		color: var( --color-gray-100 );
 	}
 }

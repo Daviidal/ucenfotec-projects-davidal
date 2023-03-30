@@ -1,6 +1,8 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Work+Sans:wght@400;500;600;700&display=swap');
 
+/* VARIABLES */
 :root {
 	--color-primary: #ff2d60;
 	--color-primary-80: #ff426f;
@@ -25,20 +27,5 @@
 	--gradient-radial-1: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
 	--font-sans-serif: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 	--font-monospace: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
-	--box-shadow: inset 0px 0px 2px hsla( 0, 0%, 100%, .2 ), inset 0px -1px 3px rgba( 0, 0, 0, .8 );
-	--button-backlight-bg: radial-gradient(circle at bottom,#283f50 0,rgba(0,0,0,.8) 30%,#1f1f1f 100%);
-	--button-backlight-bg-hover: radial-gradient(circle at bottom,#66211e 0,rgba(0,0,0,.8) 30%,#1f1f1f 100%);
-	--button-backlight-hover-color: brightness(0) saturate(100%) invert(43%) sepia(50%) saturate(5353%) hue-rotate(339deg) brightness(106%) contrast(93%);
-
-
-	--block-gradient-color1: #f4ce45;
-	--block-gradient-color2: #ef90a4;
-	--block-gradient-color3: #f64e49;
-	--block-gradient-bg: #000;
-	--block-gradient: radial-gradient(168.66% 321.3% at -5% 3.75%,var(--block-gradient-color1) 0%,var(--color-secondary-pink) 27.6%,var(--block-gradient-color3) 60.94%);
-	--block-main-grid-bg: linear-gradient(0.25turn,rgba(91,149,191,.5),rgba(239,144,165,.5) 30%,transparent 50%,rgba(239,144,165,.5) 80%,rgba(91,149,191,.5));
-	--block-main-grid-spotlight: radial-gradient(circle closest-side,var(--color-secondary-red),transparent);
-	--block-main-glow-color1: green;
-	--block-main-glow-color2: #ff0;
-	--block-main-glow-color3: brown;
+	--font-helvetica: "Helvetica Neue", "Helvetica", sans-serif;
 }

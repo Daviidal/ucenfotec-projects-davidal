@@ -1,4 +1,8 @@
 
+/*****************************************************
+* Components for 'Pricing' Page
+*****************************************************/
+
 /* PRICING */
 .pricing {
 	max-width: 140.0rem;
@@ -24,9 +28,9 @@
 		padding: 3.2rem 2.8rem;
 		border-radius: 2.4rem;
 		background-color: transparent;
-		box-shadow: rgba(255, 255, 255, 0.15) 0px 1px 3px inset, rgb(33, 40, 49) 0px -1px 3px inset;
+		box-shadow: rgba( 255, 255, 255, .15 ) 0px 1px 3px inset, rgb( 33, 40, 49 ) 0px -1px 3px inset;
 
-		&--highlight { background-image: radial-gradient(ellipse at top left,rgba(246,73,66,.1),transparent),radial-gradient(ellipse at center right,rgba(250,219,95,.1),transparent),radial-gradient(ellipse at bottom right,rgba(0,148,155,.15),transparent) !important; }
+		&--highlight { background-image: radial-gradient( ellipse at top left,rgba(246,73,66,.1),transparent),radial-gradient(ellipse at center right,rgba(250,219,95,.1),transparent),radial-gradient(ellipse at bottom right,rgba(0,148,155,.15),transparent ) !important; }
 	}
 
 	&__heading {}

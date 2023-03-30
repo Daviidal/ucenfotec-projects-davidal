@@ -1,5 +1,7 @@
+/* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Work+Sans:wght@400;500;600;700&display=swap");
+/* VARIABLES */
 :root {
   --color-primary: #ff2d60;
   --color-primary-80: #ff426f;
@@ -24,22 +26,10 @@
   --gradient-radial-1: radial-gradient( 101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94% );
   --font-sans-serif: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --font-monospace: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
-  --box-shadow: inset 0px 0px 2px hsla( 0, 0%, 100%, .2 ), inset 0px -1px 3px rgba( 0, 0, 0, .8 );
-  --button-backlight-bg: radial-gradient(circle at bottom,#283f50 0,rgba(0,0,0,.8) 30%,#1f1f1f 100%);
-  --button-backlight-bg-hover: radial-gradient(circle at bottom,#66211e 0,rgba(0,0,0,.8) 30%,#1f1f1f 100%);
-  --button-backlight-hover-color: brightness(0) saturate(100%) invert(43%) sepia(50%) saturate(5353%) hue-rotate(339deg) brightness(106%) contrast(93%);
-  --block-gradient-color1: #f4ce45;
-  --block-gradient-color2: #ef90a4;
-  --block-gradient-color3: #f64e49;
-  --block-gradient-bg: #000;
-  --block-gradient: radial-gradient(168.66% 321.3% at -5% 3.75%,var(--block-gradient-color1) 0%,var(--color-secondary-pink) 27.6%,var(--block-gradient-color3) 60.94%);
-  --block-main-grid-bg: linear-gradient(0.25turn,rgba(91,149,191,.5),rgba(239,144,165,.5) 30%,transparent 50%,rgba(239,144,165,.5) 80%,rgba(91,149,191,.5));
-  --block-main-grid-spotlight: radial-gradient(circle closest-side,var(--color-secondary-red),transparent);
-  --block-main-glow-color1: green;
-  --block-main-glow-color2: #ff0;
-  --block-main-glow-color3: brown;
+  --font-helvetica: "Helvetica Neue", "Helvetica", sans-serif;
 }
 
+/* BASE/RESET */
 *,
 *::before,
 *::after {
@@ -85,6 +75,9 @@ textarea {
   border: none;
 }
 
+/*****************************************************
+* Components used in multiple pages
+*****************************************************/
 /* TOP MESSAGE */
 .top-msg {
   padding: 0.8rem 2rem;
@@ -141,7 +134,6 @@ textarea {
 }
 .heading__gradient {
   -webkit-text-fill-color: transparent;
-  background-color: red;
   background-image: var(--gradient-2);
   background-size: 100%;
   background-repeat: repeat;
@@ -184,7 +176,7 @@ textarea {
   margin: 0;
   outline: 0;
   display: block;
-  font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
@@ -309,91 +301,7 @@ textarea {
   height: 1.4rem;
 }
 
-/* CARDS */
-.cards {
-  max-width: 140rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.cards__heading {
-  margin-bottom: 8rem;
-  position: relative;
-  font-size: 4.8rem;
-  font-weight: 600;
-  text-align: center;
-  color: #ffffff;
-}
-.cards__heading::after {
-  content: "";
-  transform-origin: center center;
-  background-image: linear-gradient(to right top, #6c22bd, #8b25bb, #a52bb9, #bc34b7, #d040b5, #e645a5, #f55195, #ff6188, #ff796e, #ff965b, #f5b255, #e1cd60);
-  position: absolute;
-  left: 50%;
-  border-radius: 20px;
-  transform: skewY(-15deg) translate(-50%, -50%) scale(0.7) translateZ(0);
-  pointer-events: none;
-  width: 900px;
-  height: 500px;
-  filter: blur(100px);
-  opacity: 0.4;
-  top: 0;
-  transition: filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
-}
-.cards__list {
-  position: relative;
-}
-.cards__glare {
-  width: 100%;
-  position: absolute;
-  top: 5%;
-  bottom: -10%;
-  margin: 0px auto;
-  z-index: -1;
-}
-.cards__glare::after {
-  content: "";
-  display: block;
-  width: 700px;
-  height: 700px;
-  transition: opacity 0.6s ease-in-out 0s, transform 0.6s ease-in-out 0s;
-  position: sticky;
-  top: 50%;
-  left: 25%;
-  background: radial-gradient(101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94%);
-  opacity: 0.67;
-  filter: blur(155px);
-  will-change: transform;
-  border-radius: 275px;
-}
-.cards__col {
-  padding: 0.8rem !important;
-}
-.cards__card {
-  height: 100%;
-  padding: 3rem;
-  border-radius: 2rem;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  background: rgba(16, 17, 19, 0.7);
-  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 3px inset, rgba(255, 255, 255, 0) 0 -1px 3px inset;
-}
-.cards__img {
-  max-width: 100%;
-  margin-bottom: 2.4rem;
-  border-radius: 1rem;
-  display: block;
-}
-.cards__name {
-  margin-bottom: 1.2rem;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-.cards__text {
-  color: #9098a2;
-}
-
-/* CARDS #2 */
+/* TEMPLATE CARDS */
 .cards-temp {
   max-width: 140rem;
   padding: 0 3rem;
@@ -614,7 +522,7 @@ textarea {
 .platforms--theme-1 {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
-  background: hsla(0, 0%, 100%, 0.04);
+  background-color: hsla(0, 0%, 100%, 0.04);
   background-image: radial-gradient(circle at top left, rgba(246, 105, 66, 0.05) 10%, transparent 40%), radial-gradient(circle at bottom right, rgba(250, 219, 95, 0.05) 10%, transparent 50%);
   background-size: 150% 150%;
   box-shadow: inset 0 1px 3px hsla(0, 0%, 100%, 0.15), inset 0 -1px 3px #000;
@@ -624,6 +532,7 @@ textarea {
 }
 .platforms__heading {
   margin-bottom: 0;
+  text-align: center;
   color: var(--color-white);
 }
 .platforms__text {
@@ -954,10 +863,6 @@ textarea {
 /* COMPANIES */
 .companies__heading {
   margin-bottom: 4rem;
-  font-family: "IBM Plex Mono", "Liberation Mono", "Courier New", monospace;
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
   text-align: center;
 }
 .companies__list {
@@ -968,7 +873,7 @@ textarea {
   height: 12rem;
   padding: 0 !important;
   border: 1px solid rgb(44, 48, 53);
-  background: rgb(5, 5, 5);
+  background-color: var(--color-gray-dark);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -993,8 +898,8 @@ textarea {
 
 /* CONTACT */
 .contact {
-  border-top: 1px solid rgb(44, 48, 53);
-  border-bottom: 1px solid rgb(44, 48, 53);
+  border-top: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-gray-300);
 }
 .contact__wrapper {
   max-width: 140rem;
@@ -1016,8 +921,8 @@ textarea {
   min-width: 37.2rem;
   padding: 1rem 1.2rem 1rem 2.4rem;
   border-radius: 4.8rem;
-  background-color: #17191c;
-  color: #fafafa;
+  background-color: var(--color-gray-500);
+  color: var(--color-gray-100);
 }
 .contact__icon {
   width: 2rem;
@@ -1030,7 +935,7 @@ textarea {
   outline: 0;
   background-color: transparent;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  color: #ffffff;
+  color: var(--color-white);
 }
 .contact__input::-moz-placeholder {
   font-size: 1.6rem;
@@ -1051,8 +956,17 @@ textarea {
 
 /*************************************************************************************************************************************************************************/
 @media only screen and (max-device-width: 1199px) {
-  .cards-2__link {
+  .cards-temp__link {
     font-size: 1.8rem;
+  }
+}
+@media only screen and (max-device-width: 1099px) {
+  .devices {
+    max-width: 70rem;
+    height: 60rem;
+  }
+  .devices__menu {
+    max-width: 40rem;
   }
 }
 @media only screen and (max-device-width: 991px) {
@@ -1102,11 +1016,14 @@ textarea {
     padding: 0 4rem;
   }
 }
+/*****************************************************
+* Components for the Navigation Menu
+*****************************************************/
 /* NAVIGATION STUFF */
 .nav {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
-  box-shadow: rgba(255, 255, 255, 0) 0px 1px 1px inset, rgba(0, 0, 0, 0) 0px -1px 3px inset;
+  box-shadow: var(--color-black) 0px 1px 1px inset, var(--color-black) 0px -1px 3px inset;
 }
 
 /* MAIN MENU */
@@ -1121,7 +1038,7 @@ textarea {
   align-items: center;
   font-size: 1.6rem;
   white-space: nowrap;
-  color: #ffffff;
+  color: var(--color-white);
   transition: opacity 200ms ease-in-out 0s;
 }
 .menu__link:hover {
@@ -1169,7 +1086,7 @@ textarea {
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  background-color: #000000;
+  background-color: var(--color-black);
 }
 .dropdown--s1 {
   width: 20rem;
@@ -1189,9 +1106,9 @@ textarea {
   position: relative;
 }
 .toggle__input {
+  position: absolute;
   z-index: 4;
   visibility: hidden;
-  position: absolute;
 }
 .toggle__btn {
   width: 100%;
@@ -1249,12 +1166,15 @@ textarea {
 .menu-toggle__link {
   display: block;
   font-size: 1.8rem;
-  color: #fafafa;
+  color: var(--color-gray-100);
 }
 
+/*****************************************************
+* Components for the layout of the pages
+*****************************************************/
 /* BODY */
 .body {
-  background-color: rgb(5, 5, 5);
+  background-color: var(--color-gray-dark);
 }
 
 /* HEADER */
@@ -1262,7 +1182,7 @@ textarea {
   position: sticky;
   z-index: 11;
   top: -1px;
-  background: rgb(0, 0, 0);
+  background: var(--color-black);
 }
 .header__wrapper {
   max-width: 140rem;
@@ -1289,7 +1209,7 @@ textarea {
 .header__link {
   position: relative;
   font-size: 1.6rem;
-  color: #ffffff;
+  color: var(--color-white);
   transition: opacity 200ms ease-in-out 0s;
 }
 .header__link::before {
@@ -1301,7 +1221,7 @@ textarea {
   bottom: 0;
   left: 0;
   transform: scaleX(0);
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   transition: all 0.2s ease-in-out 0s;
 }
 .header__link:hover {
@@ -1347,7 +1267,7 @@ textarea {
 /* FOOTER */
 .footer {
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: var(--color-black);
 }
 .footer__row--bottom {
   border-top: 0.1rem solid rgb(71, 71, 71);
@@ -1374,7 +1294,7 @@ textarea {
 }
 .footer__link {
   display: block;
-  color: #9098a2;
+  color: var(--color-gray);
   font-size: 1.4rem;
   transition: opacity 200ms ease-in-out 0s;
 }
@@ -1382,14 +1302,14 @@ textarea {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.13em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .footer__btn {
   margin-bottom: 1.6rem;
   display: block;
   cursor: pointer;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--color-white);
   transition: color 200ms ease 0s;
 }
 .footer__btn:hover {
@@ -1405,7 +1325,7 @@ textarea {
   max-width: 20rem;
   display: block;
   line-height: 172%;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .footer__message {
   display: block;
@@ -1415,7 +1335,7 @@ textarea {
   transition: opacity 200ms ease-in-out 0s;
 }
 .footer__legal:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 0.8rem;
 }
 .footer__legal:hover {
   opacity: 0.7;
@@ -1456,6 +1376,9 @@ textarea {
     text-align: center;
   }
 }
+/*****************************************************
+* Components used in 'Home' page
+*****************************************************/
 /* FEATURES */
 .features {
   margin-bottom: 4rem;
@@ -1572,7 +1495,7 @@ textarea {
   opacity: 0;
   font-weight: 600;
   white-space: nowrap;
-  color: rgb(0, 0, 0);
+  color: var(--color-black);
   background-color: var(--color-white);
   transition: opacity 200ms ease-in-out 0s;
 }
@@ -1607,7 +1530,7 @@ textarea {
   transition: filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 .landing-cards__heading {
-  color: #ffffff;
+  color: var(--color-white);
 }
 .landing-cards__heading--2 {
   max-width: 142rem;
@@ -1622,14 +1545,13 @@ textarea {
   font-size: 4.2rem;
   font-weight: 600;
   letter-spacing: -0.01rem;
-  color: #ffffff;
 }
 .landing-cards__heading--4 {
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: rgb(144, 152, 162);
+  color: var(--color-gray);
 }
 .landing-cards__text {
   max-width: 74rem;
@@ -1638,7 +1560,7 @@ textarea {
   font-size: 2.4rem;
   line-height: 3rem;
   letter-spacing: -0.05rem;
-  color: #9098a2;
+  color: var(--color-gray);
 }
 .landing-cards__item {
   margin: 0;
@@ -1690,7 +1612,7 @@ textarea {
   font-weight: 400;
   line-height: 1.42;
   letter-spacing: -0.008rem;
-  color: #9098a2;
+  color: var(--color-gray);
 }
 .landing-cards__menu {
   margin-bottom: 4rem;
@@ -1703,7 +1625,7 @@ textarea {
   outline: 0;
   display: flex;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0);
+  background-color: var(--color-black);
   transition: background-color 250ms ease-in-out 0s;
 }
 .landing-cards__btn:not(:last-child) {
@@ -1746,10 +1668,11 @@ textarea {
   font-size: 4.8rem;
   font-weight: 600;
   letter-spacing: -0.01rem;
-  color: #fff;
+  color: var(--color-white);
 }
 .reviews__link {
-  padding: 0.96rem 2.4rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
 }
 .reviews__comments {
   max-width: 140rem;
@@ -1758,8 +1681,8 @@ textarea {
 .reviews__item {
   padding: 4rem 0 4rem 3.2rem;
   border-radius: 2.4rem;
-  background: #101113;
-  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 3px inset, rgb(0, 0, 0) 0 -1px 3px inset;
+  background: var(--color-gray-600);
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 3px inset, var(--color-black) 0 -1px 3px inset;
 }
 .reviews__item:not(:last-child) {
   margin-right: 2rem;
@@ -1768,7 +1691,7 @@ textarea {
   width: 90%;
   margin-bottom: 3rem;
   font-size: 1em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .reviews__profile {
   height: 4rem;
@@ -1794,18 +1717,93 @@ textarea {
   display: block;
 }
 
-/*************************************************************************************************************************************************************************/
-@media only screen and (max-device-width: 1099px) {
-  .devices {
-    max-width: 70rem;
-    height: 60rem;
-  }
-  .devices__menu {
-    max-width: 40rem;
-  }
+/* CARDS */
+.cards {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
+.cards__heading {
+  margin-bottom: 8rem;
+  position: relative;
+  font-size: 4.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-white);
+}
+.cards__heading::after {
+  width: 90rem;
+  height: 50rem;
+  border-radius: 2rem;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  opacity: 0.4;
+  pointer-events: none;
+  filter: blur(100px);
+  transform-origin: center center;
+  transform: skewY(-15deg) translate(-50%, -50%) scale(0.7) translateZ(0);
+  background-image: linear-gradient(to right top, #6c22bd, #8b25bb, #a52bb9, #bc34b7, #d040b5, #e645a5, #f55195, #ff6188, #ff796e, #ff965b, #f5b255, #e1cd60);
+  transition: filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.cards__list {
+  position: relative;
+}
+.cards__glare {
+  width: 100%;
+  margin: 0px auto;
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  bottom: -10%;
+}
+.cards__glare::after {
+  width: 70rem;
+  height: 70rem;
+  border-radius: 27.5rem;
+  content: "";
+  display: block;
+  position: sticky;
+  top: 50%;
+  left: 25%;
+  opacity: 0.67;
+  filter: blur(155px);
+  will-change: transform;
+  background: radial-gradient(101.38% 205.08% at 23.35% 13.53%, #f64942 0%, #ef90a4 27.6%, #5b95bf 60.94%);
+  transition: opacity 0.6s ease-in-out 0s, transform 0.6s ease-in-out 0s;
+}
+.cards__col {
+  padding: 0.8rem !important;
+}
+.cards__card {
+  height: 100%;
+  padding: 3rem;
+  border-radius: 2rem;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background: rgba(16, 17, 19, 0.7);
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 3px inset, var(--color-black) 0 -1px 3px inset;
+}
+.cards__img {
+  max-width: 100%;
+  margin-bottom: 2.4rem;
+  border-radius: 1rem;
+  display: block;
+}
+.cards__name {
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+.cards__text {
+  color: var(--color-gray);
+}
+
+/*************************************************************************************************************************************************************************/
 @media only screen and (max-device-width: 991px) {
-  .main__heading {
+  .features__heading {
     margin-top: 0;
     font-size: 4.8rem;
     line-height: 5rem;
@@ -1843,13 +1841,20 @@ textarea {
     display: none;
   }
 }
+/*****************************************************
+* Components used in 'Download Apps' page
+*****************************************************/
 /* APPS */
 .apps__header {
   margin-bottom: 10rem;
 }
+.apps__heading {
+  text-align: center;
+}
 .apps__text {
   max-width: 59rem;
   margin: 0 auto;
+  font-size: 1.8rem;
   text-align: center;
 }
 .apps__row {
@@ -1880,6 +1885,9 @@ textarea {
     padding-bottom: 6.4rem;
   }
 }
+/*****************************************************
+* Components for 'Security' page
+*****************************************************/
 /* SECURITY */
 .security {
   max-width: 96rem;
@@ -1889,7 +1897,7 @@ textarea {
 .security__menu {
   padding-right: 4rem;
   position: sticky !important;
-  top: 100px !important;
+  top: 10rem !important;
 }
 .security__option:not(:last-child) {
   margin-bottom: 0.2rem;
@@ -1921,6 +1929,9 @@ textarea {
   display: inline-block;
 }
 
+/*****************************************************
+* Components for 'Pricing' Page
+*****************************************************/
 /* PRICING */
 .pricing {
   max-width: 140rem;
@@ -2007,10 +2018,13 @@ textarea {
     margin-bottom: 4rem;
   }
 }
+/*****************************************************
+* Components for 'Login' page
+*****************************************************/
 /* LOGIN */
 .login {
   height: 100vh;
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: var(--font-helvetica);
   background-color: rgb(28, 31, 34);
 }
 .login__group {
@@ -2024,9 +2038,9 @@ textarea {
   max-width: 46rem;
   margin: 0 auto 2rem auto;
   padding: 3rem 5rem;
-  border: 0.5px solid rgb(44, 48, 53);
+  border: 0.5px solid var(--color-gray-300);
   border-radius: 2rem;
-  background-color: rgb(23, 25, 28);
+  background-color: var(--color-gray-500);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px;
 }
 .login__logo {
@@ -2051,7 +2065,7 @@ textarea {
   width: 100%;
   padding: 0.8rem 0;
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: var(--font-helvetica);
   font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
@@ -2060,7 +2074,7 @@ textarea {
 .login__btn--gray {
   margin-bottom: 0.5rem;
   border-radius: 5rem;
-  border: 1px solid rgb(44, 48, 53);
+  border: 1px solid var(--color-gray-300);
   background-color: rgb(37, 40, 45);
   transition: border-color 200ms ease-in-out 0s;
 }
@@ -2084,7 +2098,7 @@ textarea {
   width: 100%;
   padding: 0.6rem 1rem;
   margin-bottom: 0.5rem;
-  border: 1px solid rgb(44, 48, 53);
+  border: 1px solid var(--color-gray-300);
   border-radius: 0.625rem;
   outline: none;
   display: block;

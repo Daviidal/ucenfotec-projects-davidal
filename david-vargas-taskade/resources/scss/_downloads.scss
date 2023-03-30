@@ -1,12 +1,17 @@
+/*****************************************************
+* Components used in 'Download Apps' page
+*****************************************************/
+
 /* APPS */
 .apps {
     &__header { margin-bottom: 10.0rem; }
 
-    &__heading {}
+    &__heading { text-align: center; }
 
     &__text {
         max-width: 59.0rem;
         margin: 0 auto;
+        font-size: 1.8rem;
         text-align: center;
     }
 
