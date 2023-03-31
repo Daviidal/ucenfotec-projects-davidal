@@ -101,8 +101,10 @@
 					<div class = "plans__wrapper">
 						<!-- Tabs -->
 						<div class = "plans__tabs d-flex justify-content-center">
-							<button class = "plans__tab">Personal & Family</button>
-							<button class = "plans__tab plans__tab--active">Teams & Business</button>
+							<button class = "plans__tab d-none d-lg-block">Personal & Family</button>
+							<button class = "plans__tab plans__tab--active d-none d-lg-block">Teams & Business</button>
+							<button class = "plans__tab d-block d-lg-none">Personal</button>
+							<button class = "plans__tab plans__tab--active d-block d-lg-none">Teams</button>
 						</div>
 						<!-- Pricing -->
 						<div class = "pricing">
@@ -117,7 +119,7 @@
 											<span class = "pricing__text pricing__text--highlight">per month for<br>20 members</span>
 										</div>
 										<p class = "pricing__text">billed annually or<br>$39 billed monthly</p>
-										<button class = "my-btn my-btn--empty pricing__btn">Buy Pro</button>
+										<button class = "my-btn my-btn--empty pricing__btn pricing__btn--1">Buy Pro</button>
 										<p class = "pricing__text pricing__text--highlight">Everything in <b>Free</b>, plus:</p>
 										<ul class = "pricing__list">
 											<li class = "pricing__item">5 Workspaces</li>
@@ -142,7 +144,7 @@
 											<span class = "pricing__text pricing__text--highlight">per month for<br>50 members</span>
 										</div>
 										<p class = "pricing__text">billed annually or<br>$99 billed monthly</p>
-										<button class = "my-btn pricing__btn">Buy Business</button>
+										<button class = "my-btn pricing__btn pricing__btn--1">Buy Business</button>
 										<p class = "pricing__text pricing__text--highlight">Everything in <b>Pro</b>, plus:</p>
 										<ul class = "pricing__list">
 											<li class = "pricing__item">20 Workspaces</li>
@@ -167,7 +169,7 @@
 											<span class = "pricing__text pricing__text--highlight">per month for<br>100 members</span>
 										</div>
 										<p class = "pricing__text">billed annually or<br>$199 billed monthly</p>
-										<button class = "my-btn my-btn--empty pricing__btn">Buy Ultimate</button>
+										<button class = "my-btn my-btn--empty pricing__btn pricing__btn--1">Buy Ultimate</button>
 										<p class = "pricing__text pricing__text--highlight">Everything in <b>Business</b>, plus:</p>
 										<ul class = "pricing__list">
 											<li class = "pricing__item">Unlimited Workspaces</li>
@@ -181,12 +183,13 @@
 									</div>
 								</div>
 							</div>
+							<!-- Enterprise -->
 							<div class = "pricing__row">
 								<div class = "pricing__level row">
 									<div class = "pricing__col pricing__col--inner col-12 col-lg">
 										<h5 class = "heading heading--5 pricing__heading">Enterprise</h5>
 										<p class = "pricing__text">For large organizations that need additional security, control, and support.</p>
-										<button class = "my-btn my-btn--empty pricing__btn"><img class = "pricing__icon" src = "resources/svg/icons/contact.svg" alt = "Contact"/> Contact Sales</button>
+										<button class = "my-btn my-btn--empty pricing__btn pricing__btn--2"><img class = "pricing__icon" src = "resources/svg/icons/contact.svg" alt = "Contact"/> Contact Sales</button>
 									</div>
 									<div class = "pricing__col pricing__col--inner col-12 col-lg">
 										<ul class = "pricing__list">
@@ -200,9 +203,9 @@
 								</div>
 							</div>
 						</div>
-						<h3 class = "plans__heading heading heading--3">Compare All Features</h3>
+						<h3 class = "plans__heading heading heading--3 d-none d-lg-block">Compare All Features</h3>
 						<!-- Tiers -->
-						<div class = "plans__tiers row">
+						<div class = "plans__tiers row d-none d-lg-flex">
 							<div class = "plans__tier col-4"><!-- empty "col" so it can match the bottom lits --></div>
 							<div class = "plans__tier d-flex flex-column align-items-center col">
 								<span class = "plans__level">Pro</span>
@@ -218,7 +221,7 @@
 							</div>
 						</div>
 						<!-- Usage -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Usage</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Workspaces</span></div>
@@ -270,7 +273,7 @@
 							</li>
 						</ul>
 						<!-- Favorites -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Customer Favorites</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">500+ Templates</span></div>
@@ -298,7 +301,7 @@
 							</li>
 						</ul>
 						<!-- Communication -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Communication</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Video Chat and Meetings</span></div>
@@ -320,7 +323,7 @@
 							</li>
 						</ul>
 						<!-- Collaboration -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Collaboration</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Project Activity</span></div>
@@ -384,7 +387,7 @@
 							</li>
 						</ul>
 						<!-- Roles -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Roles for Collaboration</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Guests</span></div>
@@ -412,7 +415,7 @@
 							</li>
 						</ul>
 						<!-- Integrations -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Integrations</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Embed Projects Anywhere</span></div>
@@ -470,7 +473,7 @@
 							</li>
 						</ul>
 						<!-- Personalizations -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Personalizations</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Internationalization (15+ languages)</span></div>
@@ -504,7 +507,7 @@
 							</li>
 						</ul>
 						<!-- Administration -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Administration</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Data Encryption</span></div>
@@ -556,7 +559,7 @@
 							</li>
 						</ul>
 						<!-- Productivity -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Productivity</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Reminders & Due Dates</span></div>
@@ -644,7 +647,7 @@
 							</li>
 						</ul>
 						<!-- Views -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Project Views</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">List View</span></div>
@@ -690,7 +693,7 @@
 							</li>
 						</ul>
 						<!-- Support -->
-						<ul class = "plans__list">
+						<ul class = "plans__list d-none d-lg-block">
 							<li class = "plans__item"><span class = "plans__title">Support</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Self-serve Knowledge Base</span></div>
@@ -724,7 +727,7 @@
 							</li>
 						</ul>
 						<!-- Soon -->
-						<ul class = "plans__list">
+						<ul class = "plans__lis d-none d-lg-blockt">
 							<li class = "plans__item"><span class = "plans__title">Coming soon!</span></li>
 							<li class = "plans__item row">
 								<div class = "plans__col col-4"><span class = "plans__name">Gantt Chart View</span></div>
